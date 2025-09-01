@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образовательный центр АКСИОС: Иностранные языки</title>
+    <meta name="description" content="Курсы английского языка для профессионального и личностного развития.">
+    <link rel="shortcut icon" href="img\favicon-96x96.png">
+    <link rel="stylesheet" href="header.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'aksios-blue': '#1E40AF',                       
+                        'aksios-light': '#3B82F6',   
+                        'aksios-superlight': '#91C2FF',                     
+                        'aksios-dark': '#2D3D72',
+                        'aksios-accent': '#60A5FA',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="header.js" defer></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+        .fade-in { animation: fadeIn 0.6s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section name="hero-section" class="bg-gradient-to-r from-aksios-blue to-aksios-dark py-32 text-white relative overflow-hidden mx-auto pt-32">
+        <div name="hero-bg-illustration" class="absolute inset-0 opacity-10">
+            <img src="img/bg/langs.jpg" alt="Иностранные языки" class="w-full h-full object-cover">
+        </div>
+        <div name="hero-content" class="container mx-auto py-10 px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h1 name="hero-title" class="text-4xl sm:text-4xl md:text-6xl lg:text-7xl md:text-6xl font-bold mb-6 leading-tight">
+                    Иностранные языки
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                    Курсы иностранного языка для профессионального и личностного развития
+                    <!-- Мы работаем только с качественными и проверенными материалами от ведущих британских издательств — Cambridge University Press, Oxford University Press и Pearson Education. 
+                    Дополнительно мы используем аутентичные статьи и аудиоматериалы, созданные профессиональными носителями языка.                     -->
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-6">
+                    <button name="langs-cta" class="bg-aksios-accent hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-out hover:scale-105">
+                        <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/">Записаться на курс</a>
+                    </button>
+
+                    <button name="langs-level" class="bg-aksios-blue hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-out hover:scale-105">
+                        <a href="/langs/english_test">Узнать свой уровень английского языка</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="container mx-auto py-20 px-4 flex flex-col md:flex-row gap-8">
+
+        <!-- Sidebar menu -->
+        <div class="w-full md:w-[35%] space-y-4">
+            <div class="sticky top-40">
+                <div class="border rounded-xl bg-white shadow p-4 mb-4">
+                    <button onclick="toggleMenu('business')" class="flex items-center justify-between w-full text-left text-lg font-semibold text-aksios-blue">
+                        Деловой английский Business English <span id="arrow-business" class="transition-transform">➔</span>
+                    </button>
+                    <div id="submenu-business" class="hidden mt-4 border-l-2 border-dashed border-gray-300 pl-4 space-y-2">
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Английский для делового общения. Интенсив">Интенсив</a>
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Английский для делового общения. Супер Интенсив">Супер Интенсив</a>
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Английский для делового общения. Стандарт">Стандарт</a>
+                    </div>
+                </div>
+
+                <div class="border rounded-xl bg-white shadow p-4 mb-4">
+                    <button onclick="toggleMenu('general')" class="flex items-center justify-between w-full text-left text-lg font-semibold text-aksios-blue">
+                        Общий английский General English <span id="arrow-general" class="transition-transform">➔</span>
+                    </button>
+                    <div id="submenu-general" class="hidden mt-4 border-l-2 border-dashed border-gray-300 pl-4 space-y-2">
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Общий английский General English" data-level="A1">A1</a>
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Общий английский General English" data-level="A2">A2</a>
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Общий английский General English" data-level="B1">B1</a>
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Общий английский General English" data-level="B2">B2</a>
+                    </div>
+                </div>
+
+                <div class="border rounded-xl bg-white shadow p-4 mb-4">
+                    <button onclick="toggleMenu('workers')" class="flex items-center justify-between w-full text-left text-lg font-semibold text-aksios-blue">
+                        Английский для работников <span id="arrow-workers" class="transition-transform">➔</span>
+                    </button>
+                    <div id="submenu-workers" class="hidden mt-4 border-l-2 border-dashed border-gray-300 pl-4 space-y-2">
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Английский для работников банков">банков</a>
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Английский для работников компаний связи и телекоммуникации">связи и телекоммуникации</a>
+                    </div>
+                </div>
+
+                <!-- <div class="border rounded-xl bg-white shadow p-4 mb-4">
+                    <button onclick="toggleMenu('russian')" class="flex items-center justify-between w-full text-left text-lg font-semibold text-aksios-blue">
+                        Русский язык для профессионального общения <span id="arrow-russian" class="transition-transform">➔</span>
+                    </button>
+                    <div id="submenu-russian" class="hidden mt-4 border-l-2 border-dashed border-gray-300 pl-4 space-y-2">
+                        <a href="#" class="block text-gray-700 hover:text-aksios-light" data-filter="Русский язык для экономистов">для экономистов</a>
+                    </div>
+                </div> -->
+            </div>            
+        </div>
+
+        <!-- Right content -->
+        <div class="w-full md:w-[65%]">            
+            <!-- Filters -->
+            <div id="level-filters" class="flex gap-4 mb-8">
+                <button data-filter="all" class="filter-btn px-4 py-2 rounded-lg bg-aksios-blue text-white">Все</button>
+                <button data-filter="A1" class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300">A1</button>
+                <button data-filter="A2" class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300">A2</button>
+                <button data-filter="B1" class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300">B1</button>
+                <button data-filter="B2" class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300">B2</button>
+            </div>
+
+            <!-- Courses -->
+            <div id="courses-grid" class="grid gap-6 md:grid-cols-2"></div>
+
+            <!-- Course details (появляется при клике на карточку) -->
+            <div id="course-details" class="mt-10 hidden bg-white p-6 rounded-xl shadow">
+                <h2 id="course-title" class="text-3xl font-bold mb-4"></h2>
+                <p id="course-description" class="text-gray-700 mb-6 whitespace-pre-line"></p>
+
+                <div class="flex gap-4 mb-6">
+                    <button data-type="regularity" class="info-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">Регулярность занятий</button>
+                    <button data-type="duration" class="info-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">Продолжительность курса</button>
+                    <button data-type="lessons" class="info-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">Количество занятий</button>
+                    <button data-type="group" class="info-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">Количество человек в группе</button>                    
+                    <button data-type="price" class="info-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">Цена</button>
+                </div>
+
+                <div id="course-info" class="text-gray-600 mb-6"></div>
+
+                <button class="bg-aksios-accent hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors hover-scale">
+                    <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/">Оставить заявку</a>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-aksios-light text-white p-4 rounded-full shadow-lg hidden z-50 
+        transform transition-transform duration-300 hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <script>
+        //-----------------------------
+        // Подключение хедера
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                
+                // После загрузки хедера, инициализируем его функциональность
+                if (typeof initHeader === 'function') {
+                    initHeader();
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка загрузки хедера:', error);
+            });   
+
+        // Подключение футера
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);        
+
+        //-----------------------------
+        // Кнопка "вверх"
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+        
+        // Показать кнопку при прокрутке вниз
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.remove('hidden');
+            } else {
+                scrollBtn.classList.add('hidden');
+            }
+        });
+
+        // Плавная прокрутка наверх
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+
+        //-----------------------------
+        // Раскрытие бокового меню
+        function toggleMenu(id) {
+            const submenu = document.getElementById('submenu-' + id);
+            const arrow = document.getElementById('arrow-' + id);
+            submenu.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-90');
+        }
+
+        //-----------------------------
+        // Фильтрация и детали курсов
+        const filters = document.querySelectorAll('.filter-btn');
+        const details = document.getElementById('course-details');
+        const courseTitle = document.getElementById('course-title');
+        const courseDescription = document.getElementById('course-description');
+        const coursesGrid = document.getElementById('courses-grid');
+        let coursesData = {};
+
+        // Загружаем JSON с курсами и создаём карточки
+        fetch('data/langs.json')
+        .then(res => res.json())
+        .then(data => {
+            coursesData = data;
+            renderCourses(data);
+        });
+
+        function renderCourses(data) {
+            coursesGrid.innerHTML = ''; // очистка
+            Object.keys(data).forEach((key) => {
+                const course = data[key];
+
+                // Определяем статус
+                let statusHTML = '';
+                if (course.status === "done") {
+                    statusHTML = `<div class="px-2 py-1 text-sm bg-gray-500 text-white rounded-full font-medium inline-block">ГРУППА НАБРАНА</div>`;
+                } else if (course.status === "inprocess") {
+                    statusHTML = `<div class="px-2 py-1 text-sm bg-green-600 text-white rounded-full font-medium inline-block">ИДЕТ НАБОР</div>`;
+                }
+
+                const card = document.createElement('div');
+                card.className = "course-card bg-white shadow rounded-xl p-6 hover-scale cursor-pointer scroll-mt-40";
+                card.dataset.id = key;
+                card.dataset.level = course.level;
+
+                card.innerHTML = `
+                    <div name="course-title" class="h-52 bg-aksios-blue rounded-xl flex items-center justify-center overflow-hidden">
+                        <h3 class="text-xl font-semibold text-white p-6">${course.title}</h3>                     
+                    </div>
+                    <div name="course-content" class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            ${statusHTML}
+                            <div class="px-2 py-1 text-sm bg-gray-200 text-aksios-dark rounded-full font-medium inline-block">${course.level}</div>                           
+                        </div>                        
+                        <p class="text-gray-600 mb-4">${course.description.substring(0,150)}...</p>
+                        <div class="flex items-center justify-end">
+                            <button class="bg-aksios-blue text-white px-4 py-2 rounded-lg hover:bg-aksios-dark transition-colors">
+                                <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/">Записаться</a>
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                // Обработчик клика по карточке
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('a, button')) return;
+                    showCourseDetails(key);
+                });
+
+                coursesGrid.appendChild(card);
+            });
+        }
+
+        function showCourseDetails(id) {
+            const course = coursesData[id];
+            if (!course) return;
+
+            courseTitle.textContent = course.title;
+            courseDescription.textContent = course.description;
+            details.dataset.currentCourse = id;
+
+            details.classList.remove('hidden');
+            coursesGrid.classList.add('hidden');
+
+            // прокрутка на 100px ниже верха страницы
+            window.scrollTo({ top: details.offsetTop - 240, behavior: 'smooth' });
+        }
+
+
+        // Обработчики кнопок внутри деталей
+        document.querySelectorAll('.info-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const type = btn.dataset.type;
+                const info = document.getElementById('course-info');
+                const currentId = details.dataset.currentCourse;
+
+                if (!currentId || !coursesData[currentId]) return;
+
+                document.querySelectorAll('.info-btn').forEach(b => {
+                    b.classList.remove('bg-aksios-blue','text-white');
+                    b.classList.add('bg-gray-200','hover:bg-gray-300','text-gray-700');
+                });
+
+                btn.classList.remove('bg-gray-200','hover:bg-gray-300','text-gray-700');
+                btn.classList.add('bg-aksios-blue','text-white');
+
+                info.textContent = coursesData[currentId].details[type] || '';
+            });
+        });
+
+
+
+        // Фильтрация карточек по уровню
+        filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+
+                // Сбрасываем все активные состояния бокового меню
+                const menuLinks = document.querySelectorAll('#submenu-business a, #submenu-general a, #submenu-workers a, #submenu-russian a');
+
+                // Обновляем активное состояние кнопок фильтров уровня
+                filters.forEach(b => {
+                    b.classList.remove('bg-aksios-blue','text-white');
+                    b.classList.add('bg-gray-200','text-gray-700','hover:bg-gray-300');
+                });
+                btn.classList.remove('bg-gray-200','text-gray-700','hover:bg-gray-300');
+                btn.classList.add('bg-aksios-blue','text-white');
+
+                if (filter === 'all') {
+                    renderCourses(coursesData);
+                } else {
+                    // Сборка всех подходящих курсов
+                    const filteredCourses = {};
+                    Object.keys(coursesData).forEach(key => {
+                        const course = coursesData[key];
+                        if (course.level === filter) {
+                            filteredCourses[key] = course;
+                        }
+                    });
+
+                    // Рендерим все подходящие курсы за один вызов
+                    renderCourses(filteredCourses);
+                }
+
+
+                // Скрываем детали курса и показываем сетку карточек
+                details.classList.add('hidden');
+                coursesGrid.classList.remove('hidden');
+            });
+        });
+
+
+
+        // Универсальный обработчик кликов по боковому меню
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuLinks = document.querySelectorAll(
+                '#submenu-business a, #submenu-general a, #submenu-workers a, #submenu-russian a'
+            );
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // переключаем видимость: показываем список, скрываем детали
+                    details.classList.add('hidden');
+                    coursesGrid.classList.remove('hidden');
+
+                    // Сохраняем фильтры из атрибутов ссылки
+                    const titleFilter = link.dataset.filter || link.dataset.title;
+                    const levelFilter = link.dataset.level || null;
+
+                    // Рендерим снова все карточки и фильтруем
+                    coursesGrid.innerHTML = ''; // очистка перед рендером
+
+                    Object.keys(coursesData).forEach((key) => {
+                        const course = coursesData[key];
+
+                        let show = false;
+                        if (levelFilter) {
+                            // фильтруем по title + level
+                            show = course.title === titleFilter && course.level === levelFilter;
+                        } else {
+                            // фильтруем только по title
+                            show = course.title === titleFilter;
+                        }
+
+                        if (show) {
+                            // создаем карточку (код совпадает с renderCourses, можно вынести в функцию)
+                            let statusHTML = '';
+                            if (course.status === "done") {
+                                statusHTML = `<div class="px-2 py-1 text-sm bg-gray-500 text-white rounded-full font-medium inline-block">ГРУППА НАБРАНА</div>`;
+                            } else if (course.status === "inprocess") {
+                                statusHTML = `<div class="px-2 py-1 text-sm bg-green-600 text-white rounded-full font-medium inline-block">ИДЕТ НАБОР</div>`;
+                            }
+
+                            const card = document.createElement('div');
+                            card.className = "course-card bg-white shadow rounded-xl p-6 hover-scale cursor-pointer scroll-mt-40";
+                            card.dataset.id = key;
+                            card.dataset.level = course.level;
+
+                            card.innerHTML = `
+                                <div name="course-title" class="h-52 bg-aksios-blue rounded-xl flex items-center justify-center overflow-hidden">
+                                    <h3 class="text-xl font-semibold text-white p-6">${course.title}</h3>                     
+                                </div>
+                                <div name="course-content" class="p-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        ${statusHTML}
+                                        ${course.level ? `<div class="px-2 py-1 text-sm bg-gray-200 text-aksios-dark rounded-full font-medium inline-block">${course.level}</div>` : ''}                           
+                                    </div>                        
+                                    <p class="text-gray-600 mb-4">${course.description.substring(0,150)}...</p>
+                                    <div class="flex items-center justify-end">
+                                        <button class="bg-aksios-blue text-white px-4 py-2 rounded-lg hover:bg-aksios-dark transition-colors">
+                                            <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/">Записаться</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+
+                            card.addEventListener('click', (e) => {
+                                if (e.target.closest('a, button')) return;                         
+                                showCourseDetails(key);
+                            });
+
+                            coursesGrid.appendChild(card);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Скрипты -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

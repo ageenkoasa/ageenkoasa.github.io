@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Образовательный центр АКСИОС: Новости</title>
+  <meta name="description" content="Новости Образовательного центра: актуальная информация о проведении семинаров и тренингов, наборе групп">
+  <link rel="shortcut icon" href="img/favicon-96x96.png">
+  <link rel="stylesheet" href="header.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'aksios-blue': '#1E40AF',
+            'aksios-light': '#3B82F6',
+            'aksios-superlight': '#91C2FF',
+            'aksios-dark': '#2D3D72',
+            'aksios-accent': '#60A5FA',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="header.js" defer></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .fade-in { animation: fadeIn 0.6s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Hero Section -->
+  <section name="hero-section" class="bg-gradient-to-r from-aksios-blue to-aksios-dark py-22 text-white relative overflow-hidden mx-auto pt-20">
+      <div name="hero-bg-illustration" class="absolute inset-0 opacity-10">
+          <img src="/img/bg/news.jpg" alt="Новости" class="w-full h-full object-cover">
+      </div>
+      <div name="hero-content" class="container mx-auto py-10 px-4 relative z-10">
+          <div class="max-w-4xl mx-auto text-center fade-in">
+              <h1 name="hero-title" class="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                  Новости
+              </h1>
+              <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                  Актуальная информация о проведении семинаров и тренингов, а также наборе групп
+              </p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Новости -->
+  <section class="container mx-auto py-16 px-4 space-y-10 whitespace-pre-line" id="news-container"></section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-aksios-light text-white p-4 rounded-full shadow-lg hidden z-50 
+        transform transition-transform duration-300 hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+
+  <script>
+    // подключение хедера
+    fetch('header.html')
+      .then(r => r.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        if (typeof initHeader === 'function') initHeader();
+      });
+
+    // подключение футера
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+
+        //-----------------------------
+        // Кнопка "вверх"
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+        
+        // Показать кнопку при прокрутке вниз
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.remove('hidden');
+            } else {
+                scrollBtn.classList.add('hidden');
+            }
+        });
+
+        // Плавная прокрутка наверх
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        
+    fetch('data/news.json')
+      .then(res => res.json())
+      .then(newsData => {
+        const container = document.getElementById('news-container');
+        container.innerHTML = '';
+
+        // Сетка карточек с отступами вокруг
+        container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-4';
+
+        Object.keys(newsData).forEach(key => {
+          const news = newsData[key];
+
+          const statusHTML = news.status === "new" 
+            ? `<span class="absolute top-4 left-4 bg-aksios-light text-white px-3 py-1 rounded-full text-sm">NEW</span>` 
+            : '';
+
+          const card = document.createElement('article');
+          card.className = "bg-white shadow rounded-xl overflow-hidden fade-in flex flex-col";
+
+          card.innerHTML = `
+            <div class="relative">
+              <img src="${news.image}" alt="${news.title}" class="w-full h-64 object-cover">
+              ${statusHTML}
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="text-sm text-gray-500 mb-2">${news.date}</div>
+              <h2 class="text-2xl font-bold mb-4 flex-1">${news.title}</h2>
+              <div class="flex justify-end">
+                <button class="read-more text-aksios-blue font-semibold hover:underline">Читать больше</button>
+              </div>
+            </div>
+          `;
+
+            // Событие "Читать больше"
+            card.querySelector('.read-more').addEventListener('click', () => {
+              container.className = "container mx-auto py-16 px-4";
+
+              container.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start py-16 px-4">
+                  <!-- Левая картинка -->
+                  <div>
+                    <img src="${news.image}" alt="${news.title}" class="w-full h-full object-cover rounded-[20px]">
+                  </div>
+
+                  <!-- Правая колонка текста -->
+                  <div class="flex flex-col justify-between h-full">
+                    <div>
+                      <div class="text-sm text-gray-500 mb-2 text-left">${news.date}</div>
+                      <h2 class="text-3xl font-bold mb-4">${news.title}</h2>
+                      <p class="text-gray-700 whitespace-pre-line mb-6">${news.full_text || news.description}</p>
+                    </div>
+                    <div class="flex justify-end">
+                      <button id="backBtn" class="text-aksios-blue font-semibold hover:underline">&larr; Назад</button>
+                    </div>
+                  </div>
+                </div>
+              `;
+
+
+            // Кнопка "Назад" возвращает сетку новостей
+            container.querySelector('#backBtn').addEventListener('click', () => {
+              container.innerHTML = '';
+              container.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 px-4";
+
+              Object.keys(newsData).forEach(key => {
+                const newsCard = createNewsCard(newsData[key], container, newsData);
+                container.appendChild(newsCard);
+              });
+            });
+          });
+
+          container.appendChild(card);
+        });
+
+        // Функция для восстановления карточек
+        function createNewsCard(news, container, newsData) {
+          const statusHTML = news.status === "new" 
+            ? `<span class="absolute top-4 left-4 bg-aksios-light text-white px-3 py-1 rounded-full text-sm">NEW</span>` 
+            : '';
+
+          const card = document.createElement('article');
+          card.className = "bg-white shadow rounded-xl overflow-hidden fade-in flex flex-col";
+
+          card.innerHTML = `
+            <div class="relative">
+              <img src="${news.image}" alt="${news.title}" class="w-full h-64 object-cover">
+              ${statusHTML}
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="text-sm text-gray-500 mb-2">${news.date}</div>
+              <h2 class="text-2xl font-bold mb-4 flex-1">${news.title}</h2>
+              <div class="flex justify-end">
+                <button class="read-more text-aksios-blue font-semibold hover:underline">Читать больше</button>
+              </div>
+            </div>
+          `;
+
+    card.querySelector('.read-more').addEventListener('click', () => {
+      container.innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start py-16 px-4">
+          <!-- Левая картинка -->
+          <div>
+            <img src="${news.image}" alt="${news.title}" class="w-full h-full object-cover rounded-[20px]">
+          </div>
+
+          <!-- Правая колонка текста -->
+          <div class="flex flex-col justify-between h-full">
+            <div>
+              <div class="text-sm text-gray-500 mb-2 text-left">${news.date}</div>
+              <h2 class="text-3xl font-bold mb-4">${news.title}</h2>
+              <p class="text-gray-700 whitespace-pre-line mb-6">${news.full_text || news.description}</p>
+            </div>
+            <div class="flex justify-end">
+              <button id="backBtn" class="text-aksios-blue font-semibold hover:underline">&larr; Назад</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Кнопка "Назад" возвращает сетку карточек
+      container.querySelector('#backBtn').addEventListener('click', () => {
+        container.innerHTML = '';
+        Object.keys(newsData).forEach(key => {
+          container.appendChild(createNewsCard(newsData[key], container, newsData));
+        });
+      });
+    });
+
+
+          return card;
+        }
+      })
+      .catch(err => console.error("Ошибка загрузки новостей:", err));
+
+  </script>
+</body>
+</html>

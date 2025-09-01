@@ -1,0 +1,397 @@
+[
+  {
+    "id": "q1",
+    "text": "1. I’m 18 and my brother is 20, so he’s ........ me.",
+    "type": "text",
+    "options": ["a. the oldest of", "b. older than", "c. as old as"],
+    "answer": "b. older than"
+  },
+  {
+    "id": "q2",
+    "text": "2. Carl’s very ........ . He’s never late, and he never forgets to do things.",
+    "type": "text",
+    "options": ["a. reliable", "b. patient", "c. strict"],
+    "answer": "a. reliable"
+  },
+  {
+    "id": "q3",
+    "text": "3. We stayed in a lovely villa ........ the sea.",
+    "type": "text",
+    "options": ["a. it overlooks ", "b. overlooked", "c. overlooking"],
+    "answer": "c. overlooking"
+  },
+  {
+    "id": "q4",
+    "text": "4. Not until the 1980s ........ for the average person to own a computer.",
+    "type": "text",
+    "options": ["a. it was possible ", "b. was it possible", "c. was possible"],
+    "answer": "b. was it possible "
+  },
+  {
+    "id": "q5",
+    "text": "5. Jan ........ her arm on a hot iron.",
+    "type": "text",
+    "options": ["a. broke", "b. burned", "c. sprained"],
+    "answer": "b. burned"
+  },
+  {
+    "id": "q6",
+    "text": "6. Tomorrow’s a holiday, so we ........ go to work.",
+    "type": "text",
+    "options": ["a. have to", "b. mustn’t", "c. don’t have to"],
+    "answer": "c. don’t have to"
+  },
+  {
+    "id": "q7",
+    "text": "7. I usually ........ swimming at least once a week.",
+    "type": "text",
+    "options": ["a. go", "b. do", "c. play"],
+    "answer": "a. go"
+  },
+  {
+    "id": "q8",
+    "text": "8. My friend Siena ........... to Russia last year.",
+    "type": "text",
+    "options": ["a. went", "b. has gone", "c. has been"],
+    "answer": "a. went"
+  },
+  {
+    "id": "q9",
+    "text": "9. This is ........... area, with a lot of factories and warehouses.",
+    "type": "text",
+    "options": ["a. an agricultural", "b. an industrial", "c. a residential"],
+    "answer": "b. an industrial"
+  },
+  {
+    "id": "q10",
+    "text": "10. If I ........... well in my exams, I ........... to university.",
+    "type": "text",
+    "options": ["a. will do; will go", "b. will do; go", "c. do; will go"],
+    "answer": "c. do; will go"
+  },
+  {
+    "id": "q11",
+    "text": "11. She was so upset that she burst ........... tears.",
+    "type": "text",
+    "options": ["a. into", "b. out", "c. with"],
+    "answer": "a. into"
+  },
+  {
+    "id": "q12",
+    "text": "12. Where did you go ........... holiday last year?",
+    "type": "text",
+    "options": ["a. for", "b. on", "c. to"],
+    "answer": "b. on"
+  },
+  {
+    "id": "q13",
+    "text": "13. Ocean currents ........... play an important part in regulating global climate.",
+    "type": "text",
+    "options": ["a. are known to", "b. thought to", "c. are believed that they"],
+    "answer": "a. are known to"
+  },
+  {
+    "id": "q14",
+    "text": "14. My cousin ........... getting a job in Bahrain.",
+    "type": "text",
+    "options": ["a. would like", "b. is planning", "c. is thinking of"],
+    "answer": "c. is thinking of"
+  },
+  {
+    "id": "q15",
+    "text": "15. I can’t ........... your hair, because I haven’t got any scissors.",
+    "type": "text",
+    "options": ["a. brush", "b. cut", "c. wash"],
+    "answer": "b. cut"
+  },
+  {
+    "id": "q16",
+    "text": "16. I wish I ........... have an exam tomorrow!",
+    "type": "text",
+    "options": ["a. don’t", "b. didn’t", "c. won’t"],
+    "answer": "b. didn’t"
+  },
+  {
+    "id": "q17",
+    "text": "17. The government plans to ........... taxes on sales of luxury items.",
+    "type": "text",
+    "options": ["a. increase", "b. expand", "c. go up"],
+    "answer": "a. increase"
+  },{
+    "id": "q18",
+    "text": "18. When I first moved to Hong Kong, life in a different country was very strange, but now I’m used ........... here.",
+    "type": "text",
+    "options": ["a. living", "b. to live", "c. to living"],
+    "answer": "c. to living"
+  },
+  {
+    "id": "q19",
+    "text": "19. There ........... milk in the fridge.",
+    "type": "text",
+    "options": ["a. is some", "b. are some", "c. is a"],
+    "answer": "a. is some"
+  },
+  {
+    "id": "q20",
+    "text": "20. Criminals are people who are guilty of ........... the law.",
+    "type": "text",
+    "options": ["a. breaking", "b. cheating", "c. committing"],
+    "answer": "a. breaking"
+  },
+  {
+    "id": "q21","text": "21. Why on earth isn’t Josh here yet? ........... for him for over an hour!",
+    "type": "text",
+    "options": ["a. I’m waiting", "b. I’ve been waiting", "c. I’ve waited"],
+    "answer": "b. I’ve been waiting"
+  },
+  {
+    "id": "q22",
+    "text": "22. “It’s pouring down, and it’s freezing.” What are the weather conditions?",
+    "type": "text",
+    "options": ["a. high winds and snow", "b. heavy rain and cold temperatures", "c. thick cloud but quite warm"],
+    "answer": "b. heavy rain and cold temperatures"
+  },
+  {
+    "id": "q23",
+    "text": "23. ........... feeling OK? You don’t look very well.",
+    "type": "text",
+    "options": ["a. Do you", "b. You are", "c. Are you"],
+    "answer": "c. Are you"
+  },
+  {
+    "id": "q24",
+    "text": "24. Daniel’s hair is getting far too long; he should ........... soon.",
+    "type": "text",
+    "options": ["a. cut it", "b. have cut it", "c. have it cut"],
+    "answer": "c. have it cut"
+  },
+  {
+    "id": "q25",
+    "text": "25. Mandy works for a computer software company. She got ........... recently, and so now she’s an area manager.",
+    "type": "text",
+    "options": ["a. made redundant", "b. promoted", "c. a raise"],
+    "answer": "b. promoted"
+  },
+  {
+    "id": "q26",
+    "text": "1. Choose the correct word:",
+    "type": "text",
+    "options": ["cat", "dog", "mouse"],
+    "answer": "dog"
+  },
+  {
+    "id": "q27",
+    "text": "27. Jamal has just sent me ........... to arrange plans for this weekend.",
+    "type": "text",
+    "options": ["a. a blog", "b. an email", "c. a website"],
+    "answer": "b. an email"
+  },
+  {
+    "id": "q28",
+    "text": "28. I promise I’ll call you as soon as I ........... .",
+    "type": "text",
+    "options": ["a. I arrive", "b. I arrived", "c. I’ll arrive"],
+    "answer": "a. I arrive"
+  },
+  {
+    "id": "q29",
+    "text": "29. Photographers and designers need to be very ........ .",
+    "type": "text",
+    "options": ["a. creative", "b. fit", "c. annoying"],
+    "answer": "a. creative"
+  },
+  {
+    "id": "q30",
+    "text": "30. The global financial crisis, ........ is forcing lots of small businesses to close, does not look set to end soon.",
+    "type": "text",
+    "options": ["a. it", "b. that", "c. which"],
+    "answer": "c. which"
+  },
+  {
+    "id": "q31",
+    "text": "31. There ........ a terrible accident if the pilot hadn’t reacted so quickly.",
+    "type": "text",
+    "options": ["a. had been", "b. was", "c. would have been"],
+    "answer": "c. would have been"
+  },
+  {
+    "id": "q32",
+    "text": "32. “Are you ready to order?” “Not yet – I’m still looking at the ........ .”",
+    "type": "text",
+    "options": ["a. bill", "b. menu", "c. annoying"],
+    "answer": "b. menu"
+  },
+  {
+    "id": "q33",
+    "text": "33. “My job is never boring.” The speaker’s job is always ........ .",
+    "type": "text",
+    "options": ["a. interesting", "b. popular", "c. difficult"],
+    "answer": "a. interesting"
+  },
+  {
+    "id": "q34",
+    "text": "34. I’ve been working here ........ about the last two years.",
+    "type": "text",
+    "options": ["a. during", "b. for", "c. since"],
+    "answer": "b. for"
+  },
+  {
+    "id": "q35",
+    "text": "35. “It leaves from Platform 2 at 4.15.” The speaker is talking about ........ .",
+    "type": "text",
+    "options": ["a. an airline flight", "b. a train", "c. a taxi"],
+    "answer": "b. a train"
+  },
+  {
+    "id": "q36",
+    "text": "36. I went to a lovely ........ last Saturday. The bride was my best friend when we were at school.",
+    "type": "text",
+    "options": ["a. anniversary", "b. marriage", "c. wedding"],
+    "answer": "c. wedding"
+  },
+  {
+    "id": "q37",
+    "text": "37. “I’ve got a headache.” “Maybe you ......... to take an aspirin.”",
+    "type": "text",
+    "options": ["a. should", "b. ought", "c. don’t"],
+    "answer": "b. ought"
+  },
+  {
+    "id": "q38",
+    "text": "38. The patient had an ......... to insert metal pins in his broken leg.",
+    "type": "text",
+    "options": ["a. injection", "b. operation", "c. X-ray"],
+    "answer": "b. operation"
+  },
+  {
+    "id": "q39","text": "39. She won a seat in parliament at the last ......... .",
+    "type": "text",
+    "options": ["a. general election", "b. opinion poll", "c. referendum"],
+    "answer": "a. general election"
+  },
+  {
+    "id": "q40",
+    "text": "40. I’m surprised you didn’t get upset. If someone said that to me, ......... really angry.",
+    "type": "text",
+    "options": ["a. I’m", "b. I was", "c. I’d be"],
+    "answer": "c. I’d be"
+  },
+  {
+    "id": "q41",
+    "text": "41. This used to be ......... part of the city, but since the old buildings were renovated it’s become a very fashionable area.",
+    "type": "text",
+    "options": ["a. an affluent", "b. a run-down", "c. a trendy"],
+    "answer": "b. a run-down"
+  },
+  {
+    "id": "q42",
+    "text": "42. Cassie went to bed early because she was ......... .",
+    "type": "text",
+    "options": ["a. tired", "b. stressed", "c. relaxed"],
+    "answer": "a. tired"
+  },
+  {
+    "id": "q43",
+    "text": "43. In the 1960s, computers were ......... expensive that ordinary people couldn’t afford them.",
+    "type": "text",
+    "options": ["a. so", "b. such", "c. too"],
+    "answer": "a. so"
+  },
+  {
+    "id": "q44",
+    "text": "44. Do you want ......... the match tonight?",
+    "type": "text",
+    "options": ["a. watching", "b. watch", "c. to watch"],
+    "answer": "c. to watch"
+  },
+  {
+    "id": "q45",
+    "text": "45. Researchers claim the new discovery is a major ......... in the fight against malaria.",
+    "type": "text",
+    "options": ["a. breakthrough", "b. investigation", "c. progress"],
+    "answer": "a. breakthrough"
+  },
+  {
+    "id": "q46",
+    "text": "46. The Maths problem was really difficult and I just couldn’t ......... the answer.",
+    "type": "text",
+    "options": ["a. check in", "b. set off", "c. work out"],
+    "answer": "c. work out"
+  },
+  {
+    "id": "q47",
+    "text": "47. When I was a child, I never ......... about the future.",
+    "type": "text",
+    "options": ["a. have worried", "b. used to worry", "c. was worrying"],
+    "answer": "b. used to worry"
+  },
+  {
+    "id": "q48",
+    "text": "48. A local politician has ......... charges of corruption made by the opposition party.",
+    "type": "text",
+    "options": ["a. accused", "b. blamed ", "c. denied"],
+    "answer": "c. denied"
+  },
+  {
+    "id": "q49",
+    "text": "49. ......... worries me about society today is how completely we have come to depend on technology.",
+    "type": "text",
+    "options": ["a. That", "b. What", "c. Which"],
+    "answer": "b. What"
+  },
+  {
+    "id": "q50",
+    "text": "50. Cats and dogs are usually kept as ......... .",
+    "type": "text",
+    "options": ["a. farm animals", "b. wild animals", "c. pets"],
+    "answer": "c. pets"
+  },
+  {
+    "id": "q51",
+    "text": "51. Jani is new in the department.",
+    "type": "audio",
+    "audioSrc": "/data/Аудирование.mp3",
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  {
+    "id": "q52",
+    "text": "52. Luciana has short dark hair.",
+    "type": "audio",
+    "audioSrc": "/data/Аудирование.mp3",
+    "options": ["True", "False"],
+    "answer": "True"
+  },
+  {
+    "id": "q53",
+    "text": "53. The guy on the phone is called Ian.",
+    "type": "audio",
+    "audioSrc": "/data/Аудирование.mp3",
+    "options": ["True", "False"],
+    "answer": "True"
+  },
+  {
+    "id": "q54",
+    "text": "54. Maria is responsible for the new orders.",
+    "type": "audio",
+    "audioSrc": "/data/Аудирование.mp3",
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  {
+    "id": "q55",
+    "text": "55. Yuki should write everything down.",
+    "type": "audio",
+    "audioSrc": "/data/Аудирование.mp3",
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  {
+    "id": "q56",
+    "text": "56. Sebastian works in communications.",
+    "type": "audio",
+    "audioSrc": "/data/Аудирование.mp3",
+    "options": ["True", "False"],
+    "answer": "True"
+  }
+]
