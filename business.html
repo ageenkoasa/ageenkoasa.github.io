@@ -160,7 +160,7 @@
 
 
         // Загружаем JSON с курсами, создаём боковое меню и карточки
-        fetch('data/business.json')
+        fetch('/data/business.json')
         .then(res => res.json())
         .then(data => {
             coursesData = data;
