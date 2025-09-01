@@ -17,11 +17,11 @@ app.get('/langs', (req, res) => {
 });
 
 app.get('/digital_economy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'economics.html'));
+  res.sendFile(path.join(__dirname, 'digital_economy.html'));
 });
 
 app.get('/business_and_management', (req, res) => {
-  res.sendFile(path.join(__dirname, 'business.html'));
+  res.sendFile(path.join(__dirname, 'business_and_management.html'));
 });
 
 app.get('/it', (req, res) => {
@@ -29,10 +29,10 @@ app.get('/it', (req, res) => {
 });
 
 app.get('/eplatform_lichba', (req, res) => {
-  res.sendFile(path.join(__dirname, 'lichba.html'));
+  res.sendFile(path.join(__dirname, 'eplatform_lichba.html'));
 });
 
-app.get('/langs/english_test', (req, res) => {
+app.get('/english_test', (req, res) => {
   res.sendFile(path.join(__dirname, 'english_test.html'));
 });
 
@@ -40,8 +40,8 @@ app.get('/news', (req, res) => {
   res.sendFile(path.join(__dirname, 'news.html'));
 });
 
-app.get('/russian', (req, res) => {
-  res.sendFile(path.join(__dirname, 'chinese_page.html'));
+app.get('/russian_for_chinese', (req, res) => {
+  res.sendFile(path.join(__dirname, 'russian_for_chinese.html'));
 });
 
 // Подключение страницы 404
