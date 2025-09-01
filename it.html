@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Образовательный центр АКСИОС: Информационные технологии</title>
     <meta name="description" content="Программы для освоения и развития цифровых навыков, повышения ИТ-компетенций и профессионального роста в сфере технологий.">
-    <link rel="shortcut icon" href="img\favicon-96x96.png">
-    <link rel="stylesheet" href="header.css">
+    <link rel="shortcut icon" href="/img/favicon-96x96.png">
+    <link rel="stylesheet" href="/header.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,7 +23,7 @@
             }
         }
     </script>
-    <script src="header.js" defer></script>
+    <script src="/header.js" defer></script>
     <style>
         html { scroll-behavior: smooth; }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -43,7 +43,7 @@
     <!-- Hero Section -->
     <section name="hero-section" class="bg-gradient-to-r from-aksios-blue to-aksios-dark py-32 text-white relative overflow-hidden mx-auto pt-32">
         <div name="hero-bg-illustration" class="absolute inset-0 opacity-10">
-            <img src="img\bg\it.jpg" alt="Цифровая экономика" class="w-full h-full object-cover">
+            <img src="/img/bg/it.jpg" alt="Цифровая экономика" class="w-full h-full object-cover">
         </div>
         <div name="hero-content" class="container mx-auto py-10 px-4 relative z-10">
             <div class="max-w-4xl mx-auto text-center fade-in">
@@ -53,7 +53,7 @@
                 <p class="text-xl md:text-2xl mb-8 text-blue-100">
                     Программы для освоения и развития цифровых навыков, повышения ИТ-компетенций и профессионального роста в сфере технологий
                 </p>
-                <button name="economics-cta" class="bg-aksios-accent hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-out hover:scale-105">
+                <button name="it-cta" class="bg-aksios-accent hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-out hover:scale-105">
                     <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/">Записаться на курс</a>
                 </button>
             </div>
@@ -138,7 +138,7 @@
             
 
         // Подключение футера
-        fetch("footer.html")
+        fetch('footer.html')
             .then(response => response.text())
             .then(data => document.getElementById("footer").innerHTML = data); 
                     
@@ -163,7 +163,7 @@
 
 
         // Загружаем JSON с курсами, создаём боковое меню и карточки
-        fetch('data/it.json')
+        fetch('/data/it.json')
         .then(res => res.json())
         .then(data => {
             coursesData = data;
