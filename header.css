@@ -188,9 +188,9 @@
     gap: 0.5rem;
   }
 
-  a[href*="lichba.gov.by"],
-  #burger-btn,
-  .mobile-logo {
+  mobile-header-inner a[href*="lichba.gov.by"],
+  mobile-header-inner #burger-btn,
+  mobile-header-inner .mobile-logo {
     flex-shrink: 0;
     min-width: 36px;
     min-height: 36px;
@@ -198,8 +198,8 @@
     height: 38px;
   }
 
-  #burger-btn,
-  a[href*="lichba.gov.by"] {
+  mobile-header-inner #burger-btn,
+  mobile-header-inner a[href*="lichba.gov.by"] {
     padding: 0;
   }
 
@@ -223,9 +223,9 @@
     flex-wrap: nowrap !important;
   }
 
-  a[href*="lichba.gov.by"],
-  #burger-btn,
-  a.mobile-logo {
+  mobile-header-inner a[href*="lichba.gov.by"],
+  mobile-header-inner #burger-btn,
+  mobile-header-inner a.mobile-logo {
     min-width: 28px !important;
     min-height: 28px !important;
     width: 32px !important;
@@ -234,8 +234,8 @@
     flex-shrink: 0;
   }
 
-  #burger-btn i,
-  a[href*="lichba.gov.by"] i.fas.fa-user-circle {
+  mobile-header-inner #burger-btn i,
+  mobile-header-inner a[href*="lichba.gov.by"] i.fas.fa-user-circle {
     font-size: 1.1rem !important;
   }
 
@@ -269,9 +269,9 @@
     flex-wrap: nowrap !important;
   }
 
-  a[href*="lichba.gov.by"],
-  #burger-btn,
-  a.mobile-logo {
+  mobile-header-inner a[href*="lichba.gov.by"],
+  mobile-header-inner #burger-btn,
+  mobile-header-inner a.mobile-logo {
     min-width: 24px !important;
     min-height: 24px !important;
     width: 26px !important;
@@ -280,8 +280,8 @@
     flex-shrink: 0 !important;
   }
 
-  #burger-btn i,
-  a[href*="lichba.gov.by"] i.fas.fa-user-circle {
+  mobile-header-inner #burger-btn i,
+  mobile-header-inner a[href*="lichba.gov.by"] i.fas.fa-user-circle {
     font-size: 1rem !important;
   }
 
