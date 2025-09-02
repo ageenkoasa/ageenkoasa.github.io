@@ -178,8 +178,8 @@
   }
 
   .mobile-logo img {
-    width: 36px !important;
-    height: 36px !important;
+    width: 38px !important;
+    height: 38px !important;
   }
 
   .mobile-header-inner {
@@ -194,8 +194,8 @@
     flex-shrink: 0;
     min-width: 36px;
     min-height: 36px;
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
   }
 
   #burger-btn,
@@ -228,8 +228,8 @@
   a.mobile-logo {
     min-width: 28px !important;
     min-height: 28px !important;
-    width: 28px !important;
-    height: 28px !important;
+    width: 32px !important;
+    height: 32px !important;
     padding: 0 !important;
     flex-shrink: 0;
   }
@@ -240,8 +240,8 @@
   }
 
   .mobile-logo img {
-    width: 28px !important;
-    height: 28px !important;
+    width: 32px !important;
+    height: 32px !important;
   }
 
   .mobile-header-inner > * {
@@ -274,8 +274,8 @@
   a.mobile-logo {
     min-width: 24px !important;
     min-height: 24px !important;
-    width: 24px !important;
-    height: 24px !important;
+    width: 26px !important;
+    height: 26px !important;
     padding: 0 !important;
     flex-shrink: 0 !important;
   }
@@ -286,8 +286,8 @@
   }
 
   .mobile-logo img {
-    width: 24px !important;
-    height: 24px !important;
+    width: 26px !important;
+    height: 26px !important;
   }
 
   .mobile-header-inner > * {
