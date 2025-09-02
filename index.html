@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Образовательный центр АКСИОС - Современное обучение и развитие</title>
     <meta name="description" content="Оперативное удовлетворение познавательных потребностей организаций и граждан по актуальной тематике их профессиональной деятельности, соответствующей области знаний.">
-    <link rel="shortcut icon" href="img\favicon-96x96.png">
+    <link rel="shortcut icon" href="/img/favicon-96x96.png">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -42,6 +42,31 @@
         .course-card:hover {
             transform: scale(1.05);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .swiper-container {
+        width: 1100px;
+        max-width: 100%;
+        margin: 50px auto;
+        }
+        .hero-product-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        }
+        .hero-product-content {
+        margin-top: 15px;
+        }
+        .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 6px;
+        background: #0073e6;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+        }
+        .btn:hover {
+        background: #005bb5;
         }
         .hover-scale { transition: transform 0.3s ease; }
         .hover-scale:hover { transform: scale(1.05); }
@@ -147,38 +172,9 @@
                                 Юлия Абухович
                             </p>
                         </i>
-                        <!-- <p class="italic">Юлия Абухович</p> -->
                     </div>
                 </div>
             </div>
-
-        </div>
-
-            <!-- <div class="max-w-7xl mx-auto text-center pt-10">
-                <div name="stats-grid" class="flex flex-wrap justify-center gap-14 mb-12">
-                    <div name="stat-item" class="flex flex-col items-center text-center">
-                        <img src="/img/icon/teachers.png" alt="Опытные" class="w-8 h-8 mb-2">
-                        <div class="text-xl sm:text-2xl md:text-3xl font-bold text-aksios-light">Опытные</div>
-                        <p class="text-lg text-gray-600">преподаватели-практики</p>
-                    </div>
-                    <div name="stat-item" class="flex flex-col items-center text-center">
-                        <img src="/img/icon/methods.png" alt="Современные" class="w-8 h-8 mb-2">
-                        <div class="text-xl sm:text-2xl md:text-3xl font-bold text-aksios-light ">Современные</div>
-                        <p class="text-lg text-gray-600">методики обучения</p>
-                    </div>
-                    <div name="stat-item" class="flex flex-col items-center text-center">
-                        <img src="/img/icon/flexible.png" alt="Гибкие" class="w-8 h-8 mb-2">
-                        <div class="text-xl sm:text-2xl md:text-3xl font-bold text-aksios-light">Гибкие</div>
-                        <p class="text-lg text-gray-600">форматы обучения</p>
-                    </div>
-                    <div name="stat-item" class="flex flex-col items-center text-center">
-                        <img src="/img/icon/certificate.png" alt="Сертификаты" class="w-8 h-8 mb-2">
-                        <div class="text-xl sm:text-2xl md:text-3xl font-bold text-aksios-light">Сертификаты</div>
-                        <p class="text-lg text-gray-600">государственного образца</p>
-                    </div>
-                </div>
-
-            </div> -->
         </div>
     </section>
 
@@ -681,7 +677,7 @@
                 </div>
 
                 <div name="faq-item" class="border border-gray-200 rounded-lg">
-                    <button name="faq-question" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50">
+                    <button name="faq-question" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50" style="overflow:hidden;">
                         <span class="font-semibold text-lg">Выдается ли сертификат по окончании курса?</span>
                         <span class="text-2xl text-aksios-blue">+</span>
                     </button>
@@ -772,77 +768,7 @@
         });
 
 
-
         //-----------------------------
-        // // Карусель О нас
-        // const carousel = document.getElementById('carousel');
-        // let items = carousel.querySelectorAll('.carousel-item');
-        // let currentIndex = 1; // старт с 2-й карточки
-        // let itemWidth = items[0].offsetWidth + 48; // ширина + px-6*2
-        // let transitioning = false;
-
-        // // Клонируем для бесконечной прокрутки
-        // carousel.prepend(items[items.length - 1].cloneNode(true));
-        // carousel.append(items[0].cloneNode(true));
-
-        // // Обновляем список
-        // items = carousel.querySelectorAll('.carousel-item');
-
-        // // Устанавливаем стартовую позицию (со сдвигом)
-        // carousel.style.transform = `translateX(${-itemWidth * currentIndex}px)`;
-
-        // // Обновление фокуса
-        // function updateFocus() {
-        // items.forEach((item, i) => {
-        //     if (i === currentIndex) {
-        //     item.classList.add('scale-105', 'opacity-100');
-        //     item.classList.remove('scale-90', 'opacity-50');
-        //     let p = item.querySelector('p');
-        //     p.classList.add('text-lg', 'font-semibold', 'text-gray-800');
-        //     p.classList.remove('text-base', 'text-gray-500');
-        //     } else {
-        //     item.classList.remove('scale-105', 'opacity-100');
-        //     item.classList.add('scale-90', 'opacity-50');
-        //     let p = item.querySelector('p');
-        //     p.classList.remove('text-lg', 'font-semibold', 'text-gray-800');
-        //     p.classList.add('text-base', 'text-gray-500');
-        //     }
-        // });
-        // }
-
-        // function moveTo(index) {
-        // if (transitioning) return;
-        // transitioning = true;
-        // carousel.style.transition = "transform 0.5s ease-in-out";
-        // carousel.style.transform = `translateX(${-itemWidth * index}px)`;
-
-        // carousel.addEventListener('transitionend', () => {
-        //     transitioning = false;
-        //     if (index === items.length - 1) {
-        //     // если справа "клон первой"
-        //     carousel.style.transition = "none";
-        //     index = 1;
-        //     carousel.style.transform = `translateX(${-itemWidth * index}px)`;
-        //     }
-        //     if (index === 0) {
-        //     // если слева "клон последней"
-        //     carousel.style.transition = "none";
-        //     index = items.length - 2;
-        //     carousel.style.transform = `translateX(${-itemWidth * index}px)`;
-        //     }
-        //     currentIndex = index;
-        //     updateFocus();
-        // }, { once: true });
-        // }
-
-        // document.getElementById('next').addEventListener('click', () => moveTo(currentIndex + 1));
-        // document.getElementById('prev').addEventListener('click', () => moveTo(currentIndex - 1));
-
-        // // Инициализация
-        // updateFocus();
-
-
-
         // Переменные для управления отображением карточек
         let visibleCount = 3;
         let currentFilter = 'all';
