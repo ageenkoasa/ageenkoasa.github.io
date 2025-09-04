@@ -17,15 +17,15 @@
     "id": "q3",
     "text": "3. We stayed in a lovely villa ........ the sea.",
     "type": "text",
-    "options": ["a. it overlooks ", "b. overlooked", "c. overlooking"],
+    "options": ["a. it overlooks", "b. overlooked", "c. overlooking"],
     "answer": "c. overlooking"
   },
   {
     "id": "q4",
     "text": "4. Not until the 1980s ........ for the average person to own a computer.",
     "type": "text",
-    "options": ["a. it was possible ", "b. was it possible", "c. was possible"],
-    "answer": "b. was it possible "
+    "options": ["a. it was possible", "b. was it possible", "c. was possible"],
+    "answer": "b. was it possible"
   },
   {
     "id": "q5",
@@ -174,10 +174,10 @@
   },
   {
     "id": "q26",
-    "text": "1. Choose the correct word:",
+    "text": "26. I can’t hear you – it’s ........... noisy in here.",
     "type": "text",
-    "options": ["cat", "dog", "mouse"],
-    "answer": "dog"
+    "options": ["a. too", "b. too much", "c. too many"],
+    "answer": "a. too"
   },
   {
     "id": "q27",
@@ -188,7 +188,7 @@
   },
   {
     "id": "q28",
-    "text": "28. I promise I’ll call you as soon as I ........... .",
+    "text": "28. I promise I’ll call you as soon as ........... .",
     "type": "text",
     "options": ["a. I arrive", "b. I arrived", "c. I’ll arrive"],
     "answer": "a. I arrive"
