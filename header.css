@@ -173,7 +173,7 @@
   padding-left: 0.25rem !important;
   padding-right: 0.25rem !important;
   gap: 0.25rem;
-  min-height: clamp(70px, 10vw, 80px);
+  min-height: clamp(72px, 11vw, 82px);
 }
 
 .mobile-header-inner > * {
@@ -184,8 +184,8 @@
 .mobile-header-inner a,
 .mobile-header-inner button {
   flex-shrink: 0;
-  width: clamp(36px, 9vw, 48px) !important;  
-  height: clamp(36px, 9vw, 48px) !important; 
+  width: clamp(38px, 9.5vw, 50px) !important; 
+  height: clamp(38px, 9.5vw, 50px) !important; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,7 +200,7 @@
 }
 
 .mobile-header-inner .mobile-logo img {
-  width: clamp(44px, 11vw, 56px) !important;
+  width: clamp(46px, 11.5vw, 58px) !important; 
   height: auto !important;
 }
 
@@ -243,12 +243,12 @@
   
   .mobile-header-inner a,
   .mobile-header-inner button {
-    width: clamp(34px, 8vw, 44px) !important;
-    height: clamp(34px, 8vw, 44px) !important;
+    width: clamp(36px, 9vw, 46px) !important;
+    height: clamp(36px, 9vw, 46px) !important;
   }
   
   .mobile-header-inner .mobile-logo img {
-    width: clamp(42px, 10vw, 52px) !important;
+    width: clamp(44px, 11vw, 54px) !important;
   }
 }
 
@@ -258,7 +258,7 @@
 @media (max-width: 512px) {
   #burger-btn i,
   .mobile-header-inner a[href*="lichba.gov.by"] i.fas.fa-user-circle {
-    font-size: clamp(1.3rem, 4.5vw, 1.6rem) !important;
+    font-size: clamp(1.4rem, 5vw, 1.7rem) !important;
   }
 
   .mobile-header-inner {
@@ -280,12 +280,12 @@
   
   .mobile-header-inner a,
   .mobile-header-inner button {
-    width: clamp(32px, 7.5vw, 42px) !important;
-    height: clamp(32px, 7.5vw, 42px) !important;
+    width: clamp(34px, 8vw, 44px) !important;
+    height: clamp(34px, 8vw, 44px) !important;
   }
   
   .mobile-header-inner .mobile-logo img {
-    width: clamp(40px, 9vw, 50px) !important;
+    width: clamp(42px, 10vw, 52px) !important;
   }
 }
 
@@ -301,17 +301,17 @@
   
   .mobile-header-inner a,
   .mobile-header-inner button {
-    width: clamp(30px, 7vw, 40px) !important;
-    height: clamp(30px, 7vw, 40px) !important;
+    width: clamp(32px, 7.5vw, 42px) !important;
+    height: clamp(32px, 7.5vw, 42px) !important;
   }
   
   .mobile-header-inner .mobile-logo img {
-    width: clamp(38px, 8.5vw, 48px) !important;
+    width: clamp(40px, 9vw, 50px) !important;
   }
   
   #burger-btn i,
   .mobile-header-inner a[href*="lichba.gov.by"] i.fas.fa-user-circle {
-    font-size: clamp(1.2rem, 4vw, 1.4rem) !important;
+    font-size: clamp(1.3rem, 4.5vw, 1.5rem) !important;
   }
 }
 
@@ -327,12 +327,12 @@
   
   .mobile-header-inner a,
   .mobile-header-inner button {
-    width: clamp(28px, 6.5vw, 38px) !important;
-    height: clamp(28px, 6.5vw, 38px) !important;
+    width: clamp(30px, 7vw, 40px) !important;
+    height: clamp(30px, 7vw, 40px) !important;
   }
   
   .mobile-header-inner .mobile-logo img {
-    width: clamp(36px, 8vw, 46px) !important;
+    width: clamp(38px, 8.5vw, 48px) !important;
   }
 }
 
