@@ -1,5 +1,4 @@
 function initHeader() {
-
   const burgerBtn = document.getElementById('burger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const body = document.body;
@@ -7,45 +6,32 @@ function initHeader() {
   const closeIcon = document.getElementById('close-icon');
 
   // Открытие / закрытие бургера
-  burgerBtn.addEventListener('click', function () {
+  burgerBtn.addEventListener('click', () => {
     const isActive = mobileMenu.classList.toggle('active');
     burgerBtn.classList.toggle('burger-active');
     body.classList.toggle('overflow-hidden');
-    if (isActive) {
-      burgerIcon.classList.add('hidden');
-      closeIcon.classList.remove('hidden');
-    } else {
-      burgerIcon.classList.remove('hidden');
-      closeIcon.classList.add('hidden');
-    }
+    burgerIcon.classList.toggle('hidden', isActive);
+    closeIcon.classList.toggle('hidden', !isActive);
   });
 
-  // Обработка аккордеонов
-  const toggles = mobileMenu.querySelectorAll('.accordion-toggle');
-  toggles.forEach(toggle => {
-    toggle.addEventListener('click', function (e) {
+  // Аккордеоны
+  mobileMenu.querySelectorAll('.accordion-toggle').forEach(toggle => {
+    toggle.addEventListener('click', e => {
       e.preventDefault();
-      const content = this.nextElementSibling;
-      const icon = this.querySelector('i');
+      const content = toggle.nextElementSibling;
+      const icon = toggle.querySelector('i');
       if (content && content.classList.contains('accordion-content')) {
         content.classList.toggle('active');
         content.classList.toggle('hidden');
-        if (icon) {
-          icon.classList.toggle('rotate-180');
-        }
+        if (icon) icon.classList.toggle('rotate-180');
       }
     });
   });
 
-  // Клик по обычным ссылкам (не аккордеон) — закрываем меню
-  const menuLinks = mobileMenu.querySelectorAll('a');
-  menuLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      // Если кликнули именно по стрелке аккордеона — не закрываем
-      if (e.target.closest('.accordion-toggle') || e.target.closest('.accordion-content')) {
-        return;
-      }
-      // Закрываем меню
+  // Закрытие меню при клике на ссылки
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => {
+      if (e.target.closest('.accordion-toggle') || e.target.closest('.accordion-content')) return;
       mobileMenu.classList.remove('active');
       burgerBtn.classList.remove('burger-active');
       body.classList.remove('overflow-hidden');
@@ -54,9 +40,9 @@ function initHeader() {
     });
   });
 
-  // При ресайзе экрана >= 1620px закрываем меню
-  window.addEventListener('resize', function () {
-    if (window.innerWidth >= 1620) {
+  // Закрытие мобильного меню при ресайзе > 825px
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 825) {
       mobileMenu.classList.remove('active');
       burgerBtn.classList.remove('burger-active');
       body.classList.remove('overflow-hidden');
@@ -65,7 +51,7 @@ function initHeader() {
     }
   });
 
-  // Улучшенная детекция переноса текста для десктопной версии
+  // Проверка переноса текста десктопного меню
   function checkTextWrap() {
     const desktopMenu = document.getElementById('desktop-menu');
     if (!desktopMenu || window.innerWidth <= 1280) return;
@@ -83,11 +69,40 @@ function initHeader() {
     }
   }
 
-  // Проверяем при загрузке и изменении размера окна
   window.addEventListener('load', checkTextWrap);
   window.addEventListener('resize', checkTextWrap);
 }
 
-document.addEventListener('DOMContentLoaded', initHeader);
+function initAnchorOffset() {
+  const header = document.querySelector('header-container');
+  const links = document.querySelectorAll('#desktop-menu a, #mobile-menu a');
 
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href')?.split('#')[1];
+      if (!targetId) return;
+
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+
+      e.preventDefault();
+
+      // Получаем высоту хедера + небольшой отступ
+      const headerHeight = header.offsetHeight;
+      const offset = 10; // можно увеличить/уменьшить
+
+      const elementPosition = targetEl.getBoundingClientRect().top + window.scrollY;
+      const scrollToPosition = elementPosition - headerHeight - offset;
+
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: 'smooth'
+      });
+    });
+  });
+}
+
+// Инициализация после DOM
+document.addEventListener('DOMContentLoaded', initHeader);
+document.addEventListener('DOMContentLoaded', initAnchorOffset);
 

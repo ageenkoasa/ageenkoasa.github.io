@@ -1,5 +1,5 @@
 /* ================================
-   Базовые стили для мобильного меню
+   Базовые стили мобильного меню
 ================================ */
 .mobile-menu {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -10,16 +10,39 @@
   transform: translateX(0);
   opacity: 1;
 }
-.submenu {
+
+/* Аккордеон */
+.accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-out;
 }
-.submenu.active {
+.accordion-content.active {
   max-height: 500px;
 }
-.burger-line {
-  transition: all 0.3s ease-in-out;
+.accordion-toggle i {
+  transition: transform 0.3s ease;
+}
+.accordion-toggle.active i {
+  transform: rotate(180deg);
+}
+
+/* Бургер */
+#burger-btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+#burger-icon.hidden,
+#close-icon.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#burger-btn {
+  position: relative;
+  z-index: 10002;
 }
 .burger-active .burger-line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
@@ -32,349 +55,105 @@
 }
 
 /* ================================
-   Кастомные цвета для Aksios
+   Цвета Aksios
 ================================ */
-.aksios-blue {
-  color: #1e40af;
-}
-.bg-aksios-blue {
-  background-color: #1e40af;
-}
-.aksios-light {
-  color: #3b82f6;
-}
-.bg-aksios-light {
-  background-color: #3b82f6;
-}
-.aksios-black {
-  color: #1f2937;
-}
-.hover\:bg-aksios-light:hover {
-  background-color: #3b82f6;
-}
-.hover\:text-aksios-blue:hover {
-  color: #1e40af;
-}
-.rotate-180 {
-  transform: rotate(180deg);
-}
+.aksios-blue { color: #1e40af; }
+.bg-aksios-blue { background-color: #1e40af; }
+.aksios-light { color: #3b82f6; }
+.bg-aksios-light { background-color: #3b82f6; }
+.aksios-black { color: #1f2937; }
+.hover\:bg-aksios-light:hover { background-color: #3b82f6; }
+.hover\:text-aksios-blue:hover { color: #1e40af; }
 
 /* ================================
-   Дополнительные стили для элементов хедера
+   Десктоп и мобильная адаптация
 ================================ */
-#desktop-menu .group:hover .absolute {
-  opacity: 1;
-  visibility: visible;
-}
-
-#burger-btn i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
-}
-
-#burger-icon.hidden,
-#close-icon.hidden {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-}
-
-#burger-btn {
-  position: relative;
-  z-index: 10002;
-}
-
-#burger-icon,
-#close-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10002;
-  cursor: pointer;
-}
+#desktop-menu { display: flex; }
+#mobile-menu { display: none; }
+#burger-btn { display: none; }
 
 /* ================================
-   Адаптивность: десктоп / мобилка
-================================ */
-#desktop-menu {
-  display: flex;
-}
-
-#mobile-menu {
-  display: none;
-}
-
-#burger-btn {
-  display: none;
-}
-
-/* Десктоп: адаптация к переносу текста */
-@media (min-width: 1281px) {
-  .desktop-header-container {
-    padding: 0 2rem;
-    transition: padding 0.3s ease;
-  }
-}
-
-/* Если элементы начинают переноситься - уменьшаем отступы */
-@media (max-width: 1400px) and (min-width: 1281px) {
-  .desktop-header-container {
-    padding: 0 1.5rem;
-  }
-  
-  #desktop-menu .mx-4 {
-    margin-left: 0.75rem !important;
-    margin-right: 0.75rem !important;
-  }
-}
-
-@media (max-width: 1320px) and (min-width: 1281px) {
-  .desktop-header-container {
-    padding: 0 1rem;
-  }
-  
-  #desktop-menu .mx-4 {
-    margin-left: 0.5rem !important;
-    margin-right: 0.5rem !important;
-  }
-  
-  #desktop-menu .text-sm {
-    font-size: 0.875rem !important;
-  }
-}
-
-/* Критическая точка - переключаемся на мобильную версию */
-@media (max-width: 1280px) {
-  #desktop-menu {
-    display: none !important;
-  }
-  
-  #burger-btn {
-    display: block !important;
-  }
-  
-  #mobile-menu.active {
-    display: block !important;
-  }
-}
-
-/* ================================
-   Стили мобильного хедера
-================================ */
-.mobile-header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  padding-left: 0.25rem !important;
-  padding-right: 0.25rem !important;
-  gap: 0.25rem;
-  min-height: clamp(72px, 11vw, 82px);
-}
-
-.mobile-header-inner > * {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.mobile-header-inner a,
-.mobile-header-inner button {
-  flex-shrink: 0;
-  width: clamp(38px, 9.5vw, 50px) !important; 
-  height: clamp(38px, 9.5vw, 50px) !important; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobile-header-inner .mobile-logo {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 0;
-}
-
-.mobile-header-inner .mobile-logo img {
-  width: clamp(46px, 11.5vw, 58px) !important; 
-  height: auto !important;
-}
-
-/* Адаптация мобильного хедера для разных экранов */
-@media (max-width: 1024px) {
-  .mobile-header-inner {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    gap: 0.4rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .mobile-header-inner {
-    padding-left: 0.4rem !important;
-    padding-right: 0.4rem !important;
-    gap: 0.3rem;
-  }
-  
-  .mobile-header-inner a,
-  .mobile-header-inner button {
-    width: clamp(26px, 7vw, 36px) !important;
-    height: clamp(26px, 7vw, 36px) !important;
-  }
-  
-  .mobile-header-inner .mobile-logo img {
-    width: clamp(26px, 8vw, 38px) !important;
-  }
-}
-
-/* ================================
-   Экраны ≤ 768px
+   Порог переключения на мобилку ≤825px
 ================================ */
 @media (max-width: 768px) {
+  #desktop-menu { display: none !important; }
+  #burger-btn { display: block !important; }
+  #mobile-menu.active { display: block !important; }
   .mobile-header-inner {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
     gap: 0.5rem;
   }
-  
   .mobile-header-inner a,
   .mobile-header-inner button {
     width: clamp(36px, 9vw, 46px) !important;
     height: clamp(36px, 9vw, 46px) !important;
   }
-  
   .mobile-header-inner .mobile-logo img {
     width: clamp(44px, 11vw, 54px) !important;
   }
 }
 
-/* ================================
-   Экраны ≤ 512px
-================================ */
+/* Адаптация мобильного хедера под разные экраны */
 @media (max-width: 512px) {
   #burger-btn i,
   .mobile-header-inner a[href*="lichba.gov.by"] i.fas.fa-user-circle {
     font-size: clamp(1.4rem, 5vw, 1.7rem) !important;
   }
-
-  .mobile-header-inner {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    gap: 0.4rem;
-  }
+  .mobile-header-inner { gap: 0.4rem; }
 }
-
-/* ================================
-   Экраны ≤ 428px
-================================ */
 @media (max-width: 428px) {
-  .mobile-header-inner {
-    padding-left: 0.25rem !important;
-    padding-right: 0.25rem !important;
-    gap: 0.3rem !important;
-  }
-  
+  .mobile-header-inner { gap: 0.3rem !important; }
   .mobile-header-inner a,
   .mobile-header-inner button {
     width: clamp(34px, 8vw, 44px) !important;
     height: clamp(34px, 8vw, 44px) !important;
   }
-  
   .mobile-header-inner .mobile-logo img {
     width: clamp(42px, 10vw, 52px) !important;
   }
 }
-
-/* ================================
-   Экраны ≤ 375px
-================================ */
 @media (max-width: 375px) {
-  .mobile-header-inner {
-    padding-left: 0.15rem !important;
-    padding-right: 0.15rem !important;
-    gap: 0.25rem !important;
-  }
-  
+  .mobile-header-inner { gap: 0.25rem !important; }
   .mobile-header-inner a,
   .mobile-header-inner button {
     width: clamp(32px, 7.5vw, 42px) !important;
     height: clamp(32px, 7.5vw, 42px) !important;
   }
-  
   .mobile-header-inner .mobile-logo img {
     width: clamp(40px, 9vw, 50px) !important;
   }
-  
   #burger-btn i,
   .mobile-header-inner a[href*="lichba.gov.by"] i.fas.fa-user-circle {
     font-size: clamp(1.3rem, 4.5vw, 1.5rem) !important;
   }
 }
-
-/* ================================
-   Экраны ≤ 320px (самые маленькие)
-================================ */
 @media (max-width: 320px) {
-  .mobile-header-inner {
-    padding-left: 0.1rem !important;
-    padding-right: 0.1rem !important;
-    gap: 0.1rem !important;
-  }
-  
+  .mobile-header-inner { gap: 0.1rem !important; }
   .mobile-header-inner a,
   .mobile-header-inner button {
     width: clamp(30px, 7vw, 40px) !important;
     height: clamp(30px, 7vw, 40px) !important;
   }
-  
   .mobile-header-inner .mobile-logo img {
     width: clamp(38px, 8.5vw, 48px) !important;
   }
 }
 
-/* Аккордеон для мобильного меню */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
-
-.accordion-content.active {
-  max-height: 500px;
-}
-
-.accordion-toggle i {
-  transition: transform 0.3s ease;
-}
-
-.accordion-toggle.active i {
-  transform: rotate(180deg);
-}
-
-
-/* Дополнительные стили для адаптивности переноса текста в хедере */
-
+/* ================================
+   Адаптивность десктопного меню при переносе текста
+================================ */
 .container.mx-auto.reduce-padding {
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
-  max-width: 100% !important; /* расширяем контейнер на всю ширину */
+  max-width: 100% !important;
 }
-
-#desktop-menu.reduce-gap {
-  gap: 0.5rem; /* уменьшаем расстояния между пунктами меню */
-}
-
+#desktop-menu.reduce-gap { gap: 0.5rem; }
 #desktop-menu.reduce-margins .mx-4 {
   margin-left: 0.3rem !important;
   margin-right: 0.3rem !important;
 }
-
 #desktop-menu.smaller-font {
   font-size: 0.85rem;
   line-height: 1.1;
 }
-
