@@ -1,427 +1,537 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Образовательный центр АКСИОС: English Test</title>
-    <meta name="description" content="Take the test and find out which course is right for you">
-    <link rel="shortcut icon" href="/img/favicon-96x96.png">
-    <link rel="stylesheet" href="header.css">
+    <meta
+      name="description"
+      content="Take the test and find out which course is right for you"
+    />
+    <link rel="shortcut icon" href="/img/favicon-96x96.png" />
+    <link rel="stylesheet" href="header.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'aksios-blue': '#1E40AF',
-                        'aksios-light': '#3B82F6',
-                        'aksios-superlight': '#91C2FF',
-                        'aksios-dark': '#2D3D72',
-                        'aksios-accent': '#60A5FA',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "aksios-blue": "#1E40AF",
+              "aksios-light": "#3B82F6",
+              "aksios-superlight": "#91C2FF",
+              "aksios-dark": "#2D3D72",
+              "aksios-accent": "#60A5FA",
+            },
+          },
+        },
+      };
     </script>
     <script src="header.js" defer></script>
     <style>
-        html { scroll-behavior: smooth; }
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.05); }
-        .fade-in { animation: fadeIn 0.6s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    </style>   
-    <base href="/english_test">
-</head>
+      html {
+        scroll-behavior: smooth;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <base href="/english_test" />
+  </head>
 
-<body class="bg-gray-50">
-  <!-- Header -->
-  <div id="header-container"></div>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <div id="header-container"></div>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-aksios-blue to-aksios-dark py-32 text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <img src="/img/bg/test.jpg" alt="English Test" class="w-full h-full object-cover">
-    </div>
-    <div class="container mx-auto px-4 relative z-10 text-center">
-      <h1 class="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">PLACEMENT TEST</h1>
-      <p class="text-xl md:text-2xl mb-8 text-blue-100">Take the test and find out which course is right for you</p>
-      <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/" 
-         class="bg-aksios-accent hover:bg-aksios-superlight px-8 py-4 rounded-lg text-lg font-semibold transition">
-        Sign up for a course
-      </a>
-    </div>
-  </section>
-
-  <div class="min-h-screen flex flex-col items-center p-6 space-y-8">
-    <!-- Обложка теста -->
-    <section id="cover" class="max-w-xl bg-white rounded-lg shadow p-8 text-center space-y-4">
-      <h1 class="text-3xl font-bold text-aksios-blue">English Language Test</h1>
-      <p class="text-gray-700">Test your English skills with a variety of questions. You must answer all questions to finish the test.</p>
-      <button id="start-test-btn" class="bg-aksios-blue text-white px-6 py-2 rounded-lg hover:bg-aksios-light transition">Start Test</button>
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-aksios-blue to-aksios-dark py-32 text-white relative overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-10">
+        <img
+          src="/img/bg/test.jpg"
+          alt="English Test"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <h1 class="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+          PLACEMENT TEST
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100">
+          Take the test and find out which course is right for you
+        </p>
+        <a
+          href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/"
+          class="bg-aksios-accent hover:bg-aksios-superlight px-8 py-4 rounded-lg text-lg font-semibold transition"
+        >
+          Sign up for a course
+        </a>
+      </div>
     </section>
 
-    <!-- Контейнер теста -->
-    <section id="english-test" class="hidden max-w-6xl w-full flex h-[500px] border border-gray-200 rounded-lg overflow-hidden shadow-lg">
-      <nav id="question-nav" class="w-48 bg-white border-r border-gray-300 overflow-y-auto p-3 space-y-2"></nav>
-      <main id="question-content" class="flex-1 p-6 bg-white overflow-y-auto"></main>
-    </section>
+    <div class="min-h-screen flex flex-col items-center p-6 space-y-8">
+      <!-- Обложка теста -->
+      <section
+        id="cover"
+        class="max-w-xl bg-white rounded-lg shadow p-8 text-center space-y-4"
+      >
+        <h1 class="text-3xl font-bold text-aksios-blue">
+          English Language Test
+        </h1>
+        <p class="text-gray-700">
+          Test your English skills with a variety of questions. You must answer
+          all questions to finish the test.
+        </p>
+        <button
+          id="start-test-btn"
+          class="bg-aksios-blue text-white px-6 py-2 rounded-lg hover:bg-aksios-light transition"
+        >
+          Start Test
+        </button>
+      </section>
 
-    <!-- Результат -->
-    <section id="result-section" class="hidden max-w-xl bg-white rounded-lg shadow p-8 space-y-6">
-        <h2 class="text-2xl font-semibold text-aksios-blue text-center">Test Completed!</h2>
-        
+      <!-- Контейнер теста -->
+      <section
+        id="english-test"
+        class="hidden max-w-6xl w-full flex h-[500px] border border-gray-200 rounded-lg overflow-hidden shadow-lg"
+      >
+        <nav
+          id="question-nav"
+          class="w-48 bg-white border-r border-gray-300 overflow-y-auto p-3 space-y-2"
+        ></nav>
+        <main
+          id="question-content"
+          class="flex-1 p-6 bg-white overflow-y-auto"
+        ></main>
+      </section>
+
+      <!-- Результат -->
+      <section
+        id="result-section"
+        class="hidden max-w-xl bg-white rounded-lg shadow p-8 space-y-6"
+      >
+        <h2 class="text-2xl font-semibold text-aksios-blue text-center">
+          Test Completed!
+        </h2>
+
         <!-- Баллы -->
         <p id="score-text" class="text-gray-800 font-medium text-center"></p>
-        
+
         <!-- Уровень и картинка -->
         <div id="level-result" class="space-y-4 text-center hidden">
-            <p id="level-text" class="text-xl font-bold text-aksios-blue"></p>
-            <img id="level-image" src="" alt="Your Level" class="mx-auto w-40 h-40 object-contain opacity-0 transition-opacity duration-700"/>
+          <p id="level-text" class="text-xl font-bold text-aksios-blue"></p>
+          <img
+            id="level-image"
+            src=""
+            alt="Your Level"
+            class="mx-auto w-40 h-40 object-contain opacity-0 transition-opacity duration-700"
+          />
         </div>
 
         <!-- Форма -->
         <form id="user-data-form" class="space-y-4">
-            <div>
-                <label for="user-name" class="block text-sm font-medium text-gray-700">Your name</label>
-                <input id="user-name" name="userName" type="text" required class="mt-1 w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-aksios-blue"/>
-            </div>
-            <div>
-                <label for="user-email" class="block text-sm font-medium text-gray-700">Your email</label>
-                <input id="user-email" name="userEmail" type="email" required class="mt-1 w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-aksios-blue"/>
-            </div>
-            <div class="flex justify-center">
-            <button type="submit" class="bg-aksios-blue text-white px-6 py-2 rounded-lg hover:bg-aksios-light transition">
-                Send Results
+          <div>
+            <label
+              for="user-name"
+              class="block text-sm font-medium text-gray-700"
+              >Your name</label
+            >
+            <input
+              id="user-name"
+              name="userName"
+              type="text"
+              required
+              class="mt-1 w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-aksios-blue"
+            />
+          </div>
+          <div>
+            <label
+              for="user-email"
+              class="block text-sm font-medium text-gray-700"
+              >Your email</label
+            >
+            <input
+              id="user-email"
+              name="userEmail"
+              type="email"
+              required
+              class="mt-1 w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-aksios-blue"
+            />
+          </div>
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="bg-aksios-blue text-white px-6 py-2 rounded-lg hover:bg-aksios-light transition"
+            >
+              Send Results
             </button>
-            </div>
+          </div>
         </form>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" 
-        class="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 md:bottom-9 md:right-9
-            bg-aksios-light text-white p-3 sm:p-4 md:p-5
-            rounded-full shadow-lg hidden z-30
-            transform transition-transform duration-300 hover:scale-110">
-        <svg xmlns="http://www.w3.org/2000/svg" 
-            class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" 
-            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-        </svg>
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTopBtn"
+      class="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 md:bottom-9 md:right-9 bg-aksios-light text-white p-3 sm:p-4 md:p-5 rounded-full shadow-lg hidden z-30 transform transition-transform duration-300 hover:scale-110"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
     </button>
 
-  <!-- Footer -->
-  <footer id="contacts"></footer> 
+    <!-- Footer -->
+    <footer id="contacts"></footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-        // Подключение хедера
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-                
-                // После загрузки хедера, инициализируем его функциональность
-                if (typeof initHeader === 'function') {
-                    initHeader();
-                }
-            })
-            .catch(error => {
-                console.error('Ошибка загрузки хедера:', error);
-            });      
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // Подключение хедера
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
 
-        // Подключение футера
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('contacts').innerHTML = data);   
-
-
-        //-----------------------------
-        // Кнопка "вверх"
-        const scrollBtn = document.getElementById('scrollToTopBtn');
-        
-        // Показать кнопку при прокрутке вниз
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollBtn.classList.remove('hidden');
-            } else {
-                scrollBtn.classList.add('hidden');
-            }
+          // После загрузки хедера, инициализируем его функциональность
+          if (typeof initHeader === "function") {
+            initHeader();
+          }
+        })
+        .catch((error) => {
+          console.error("Ошибка загрузки хедера:", error);
         });
 
-        // Плавная прокрутка наверх
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });            
+      // Подключение футера
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("contacts").innerHTML = data));
 
+      //-----------------------------
+      // Кнопка "вверх"
+      const scrollBtn = document.getElementById("scrollToTopBtn");
 
-        let questions = [];
-        let answers = {};
-
-        async function loadQuestions() {
-            try {
-                const res = await fetch('/data/test.json');
-                if (!res.ok) throw new Error("Ошибка загрузки JSON");
-                questions = await res.json();
-
-                renderSidebar();      // рисуем кнопки
-                renderQuestion(questions[0].id);  // показываем первый вопрос
-            } catch (err) {
-                console.error("Не удалось загрузить вопросы:", err);
-            }
+      // Показать кнопку при прокрутке вниз
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.remove("hidden");
+        } else {
+          scrollBtn.classList.add("hidden");
         }
+      });
 
+      // Плавная прокрутка наверх
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
 
-        const cover = document.getElementById('cover');
-        const testSection = document.getElementById('english-test');
-        const navEl = document.getElementById('question-nav');
-        const contentEl = document.getElementById('question-content');
-        const resultSection = document.getElementById('result-section');
-        const scoreText = document.getElementById('score-text');
-        const userDataForm = document.getElementById('user-data-form');
-        const startBtn = document.getElementById('start-test-btn');
-        let level = "";
+      let questions = [];
+      let answers = {};
 
-        // Кнопка старт
-        startBtn.addEventListener('click', () => {
-            cover.classList.add('hidden');
-            testSection.classList.remove('hidden');
-            renderQuestion(questions[0].id);
-        });
+      async function loadQuestions() {
+        try {
+          const res = await fetch("/data/test.json");
+          if (!res.ok) throw new Error("Ошибка загрузки JSON");
+          questions = await res.json();
 
-        // Навигация по вопросам
-        questions.forEach((q,i)=>{
-        const btn=document.createElement('button');
-        btn.className='w-full text-left px-4 py-2 rounded';
-        btn.textContent=`Question ${i+1}`;
-        btn.dataset.qid=q.id;
-        btn.onclick=()=>renderQuestion(q.id);
+          renderSidebar(); // рисуем кнопки
+          renderQuestion(questions[0].id); // показываем первый вопрос
+        } catch (err) {
+          console.error("Не удалось загрузить вопросы:", err);
+        }
+      }
+
+      const cover = document.getElementById("cover");
+      const testSection = document.getElementById("english-test");
+      const navEl = document.getElementById("question-nav");
+      const contentEl = document.getElementById("question-content");
+      const resultSection = document.getElementById("result-section");
+      const scoreText = document.getElementById("score-text");
+      const userDataForm = document.getElementById("user-data-form");
+      const startBtn = document.getElementById("start-test-btn");
+      let level = "";
+
+      // Кнопка старт
+      startBtn.addEventListener("click", () => {
+        cover.classList.add("hidden");
+        testSection.classList.remove("hidden");
+        renderQuestion(questions[0].id);
+      });
+
+      // Навигация по вопросам
+      questions.forEach((q, i) => {
+        const btn = document.createElement("button");
+        btn.className = "w-full text-left px-4 py-2 rounded";
+        btn.textContent = `Question ${i + 1}`;
+        btn.dataset.qid = q.id;
+        btn.onclick = () => renderQuestion(q.id);
         navEl.appendChild(btn);
+      });
+
+      function renderSidebar() {
+        const navEl = document.getElementById("question-nav");
+        navEl.innerHTML = ""; // очищаем
+
+        questions.forEach((q, i) => {
+          const btn = document.createElement("button");
+          btn.className =
+            "w-full text-left px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-700";
+          btn.textContent = `Question ${i + 1}`;
+          btn.dataset.qid = q.id;
+          btn.onclick = () => renderQuestion(q.id);
+          navEl.appendChild(btn);
+        });
+      }
+
+      function updateAnsweredButtons() {
+        questions.forEach((q) => {
+          const btn = navEl.querySelector(`button[data-qid="${q.id}"]`);
+          if (!btn) return;
+
+          if (answers[q.id]) {
+            // Если ответ есть → светло-голубой фон
+            btn.classList.remove("bg-gray-200", "hover:bg-gray-300");
+            btn.classList.add("bg-aksios-superlight");
+          } else {
+            // Если нет ответа → возвращаем серый фон
+            btn.classList.remove("bg-aksios-superlight");
+            btn.classList.add("bg-gray-200", "hover:bg-gray-300");
+          }
+        });
+      }
+
+      function renderQuestion(qid) {
+        const q = questions.find((x) => x.id === qid);
+        if (!q) return;
+
+        // Сбрасываем стили у всех кнопок
+        navEl.querySelectorAll("button").forEach((b) => {
+          b.classList.remove("bg-aksios-blue", "text-white");
+          b.classList.add("bg-gray-200", "hover:bg-gray-300", "text-gray-700");
         });
 
-        function renderSidebar(){
-            const navEl = document.getElementById('question-nav');
-            navEl.innerHTML = ''; // очищаем
-
-            questions.forEach((q,i)=>{
-                const btn=document.createElement('button');
-                btn.className='w-full text-left px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-700';
-                btn.textContent=`Question ${i+1}`;
-                btn.dataset.qid=q.id;
-                btn.onclick=()=>renderQuestion(q.id);
-                navEl.appendChild(btn);
-            });
+        // Активной кнопке назначаем синий стиль
+        const activeBtn = navEl.querySelector(`button[data-qid="${qid}"]`);
+        if (activeBtn) {
+          activeBtn.classList.remove(
+            "bg-gray-200",
+            "hover:bg-gray-300",
+            "text-gray-700"
+          );
+          activeBtn.classList.add("bg-aksios-blue", "text-white");
         }
 
-        function updateAnsweredButtons() {
-            questions.forEach(q => {
-                const btn = navEl.querySelector(`button[data-qid="${q.id}"]`);
-                if (!btn) return;
+        // Контент вопроса
+        contentEl.innerHTML = "";
 
-                if (answers[q.id]) {
-                    // Если ответ есть → светло-голубой фон
-                    btn.classList.remove('bg-gray-200','hover:bg-gray-300');
-                    btn.classList.add('bg-aksios-superlight');
-                } else {
-                    // Если нет ответа → возвращаем серый фон
-                    btn.classList.remove('bg-aksios-superlight');
-                    btn.classList.add('bg-gray-200','hover:bg-gray-300');
-                }
-            });
+        // Подсказка
+        const hint = document.createElement("p");
+        hint.className = "italic text-gray-500 mb-2";
+        hint.textContent =
+          q.type === "audio"
+            ? "Listen to the audio and choose True or False for the sentences."
+            : "Choose the correct answer.";
+        contentEl.appendChild(hint);
+
+        // Текст вопроса
+        const p = document.createElement("p");
+        p.className = "text-lg font-semibold mb-4";
+        p.textContent = q.text;
+        contentEl.appendChild(p);
+
+        if (q.type === "audio") {
+          const audio = document.createElement("audio");
+          audio.controls = true;
+          audio.src = q.audioSrc;
+          audio.className = "mb-4 w-full";
+          contentEl.appendChild(audio);
         }
 
-        function renderQuestion(qid){
-            const q = questions.find(x => x.id === qid); 
-            if(!q) return;
+        // Варианты ответов
+        q.options.forEach((opt) => {
+          const label = document.createElement("label");
+          label.className = "block mb-2 cursor-pointer";
+          const input = document.createElement("input");
+          input.type = "radio";
+          input.name = q.id;
+          input.value = opt;
+          input.className = "mr-2";
+          if (answers[q.id] === opt) input.checked = true;
+          input.onchange = (e) => {
+            answers[q.id] = e.target.value;
+            updateAnsweredButtons();
+            checkCompletion();
+          };
+          label.appendChild(input);
+          label.appendChild(document.createTextNode(opt));
+          contentEl.appendChild(label);
+        });
+      }
 
-            // Сбрасываем стили у всех кнопок
-            navEl.querySelectorAll('button').forEach(b => {
-                b.classList.remove('bg-aksios-blue','text-white');
-                b.classList.add('bg-gray-200','hover:bg-gray-300','text-gray-700');
-            });
+      function checkCompletion() {
+        const all = questions.every((q) => answers[q.id]);
+        if (all && !document.getElementById("finish-btn")) {
+          const btn = document.createElement("button");
+          btn.id = "finish-btn";
+          btn.className =
+            "mt-4 bg-aksios-blue text-white px-6 py-2 rounded-lg hover:bg-aksios-light transition";
+          btn.textContent = "Finish Test";
+          btn.onclick = finishTest;
+          contentEl.appendChild(btn);
+        }
+      }
 
-            // Активной кнопке назначаем синий стиль
-            const activeBtn = navEl.querySelector(`button[data-qid="${qid}"]`);
-            if(activeBtn){
-                activeBtn.classList.remove('bg-gray-200','hover:bg-gray-300','text-gray-700');
-                activeBtn.classList.add('bg-aksios-blue','text-white');
-            }
+      // Результаты
+      function finishTest() {
+        testSection.classList.add("hidden");
+        resultSection.classList.remove("hidden");
 
+        let score = 0;
+        questions.forEach((q) => {
+          if (answers[q.id] === q.answer) score++;
+        });
 
-            // Контент вопроса
-            contentEl.innerHTML = '';
+        scoreText.textContent = `You answered correctly ${score} out of ${questions.length} questions.`;
 
-            // Подсказка
-            const hint = document.createElement('p');
-            hint.className = 'italic text-gray-500 mb-2';
-            hint.textContent = q.type === 'audio' ? 
-                'Listen to the audio and choose True or False for the sentences.' : 
-                'Choose the correct answer.';
-            contentEl.appendChild(hint);
+        const levelResult = document.getElementById("level-result");
+        const levelText = document.getElementById("level-text");
+        const levelImage = document.getElementById("level-image");
 
-            // Текст вопроса
-            const p = document.createElement('p');
-            p.className = 'text-lg font-semibold mb-4';
-            p.textContent = q.text;
-            contentEl.appendChild(p);
+        let imageSrc = "";
 
-            if(q.type === 'audio'){
-                const audio=document.createElement('audio');
-                audio.controls=true;
-                audio.src=q.audioSrc;
-                audio.className='mb-4 w-full';
-                contentEl.appendChild(audio);
-            }
-
-            // Варианты ответов
-            q.options.forEach(opt=>{
-                const label=document.createElement('label');
-                label.className='block mb-2 cursor-pointer';
-                const input=document.createElement('input');
-                input.type='radio'; input.name=q.id; input.value=opt; input.className='mr-2';
-                if(answers[q.id]===opt) input.checked=true;
-                input.onchange = e => {
-                    answers[q.id] = e.target.value;
-                    updateAnsweredButtons();
-                    checkCompletion();
-                };
-                label.appendChild(input);
-                label.appendChild(document.createTextNode(opt));
-                contentEl.appendChild(label);
-            });
+        if (score >= 0 && score <= 15) {
+          level = "Elementary A1";
+          imageSrc = "/img/test/a1.jpg";
+        } else if (score >= 16 && score <= 29) {
+          level = "Pre-Intermediate A2";
+          imageSrc = "/img/test/a2.jpg";
+        } else if (score >= 30 && score <= 40) {
+          level = "Intermediate B1";
+          imageSrc = "/img/test/b1.jpg";
+        } else if (score >= 41 && score <= 50) {
+          level = "Upper-Intermediate B2";
+          imageSrc = "/img/test/b2.jpg";
+        } else if (score >= 51 && score <= 56) {
+          level = "Advanced C1";
+          imageSrc = "/img/test/c1.jpg";
         }
 
+        levelText.textContent = `Your English Level: ${level}`;
+        levelImage.src = imageSrc;
 
-        function checkCompletion(){
-            const all=questions.every(q=>answers[q.id]);
-            if(all && !document.getElementById('finish-btn')){
-                const btn=document.createElement('button');
-                btn.id='finish-btn';
-                btn.className='mt-4 bg-aksios-blue text-white px-6 py-2 rounded-lg hover:bg-aksios-light transition';
-                btn.textContent='Finish Test';
-                btn.onclick=finishTest;
-                contentEl.appendChild(btn);
-            }
-        }
+        // показать блок
+        levelResult.classList.remove("hidden");
 
+        // плавное появление картинки
+        setTimeout(() => {
+          levelImage.classList.remove("opacity-0");
+        }, 100);
+      }
 
-        // Результаты
-        function finishTest() {
-            testSection.classList.add('hidden');
-            resultSection.classList.remove('hidden');
-            
-            let score = 0;
-            questions.forEach(q => {
-                if (answers[q.id] === q.answer) score++;
-            });
-
-            scoreText.textContent = `You answered correctly ${score} out of ${questions.length} questions.`;
-
-            const levelResult = document.getElementById('level-result');
-            const levelText = document.getElementById('level-text');
-            const levelImage = document.getElementById('level-image');
-
-            let imageSrc = "";
-
-            if (score >= 0 && score <= 15) {
-                level = "Elementary A1";
-                imageSrc = "/img/test/a1.jpg";
-            } else if (score >= 16 && score <= 29) {
-                level = "Pre-Intermediate A2";
-                imageSrc = "/img/test/a2.jpg";
-            } else if (score >= 30 && score <= 40) {
-                level = "Intermediate B1";
-                imageSrc = "/img/test/b1.jpg";
-            } else if (score >= 41 && score <= 50) {
-                level = "Upper-Intermediate B2";
-                imageSrc = "/img/test/b2.jpg";
-            } else if (score >= 51 && score <= 56) {
-                level = "Advanced C1";
-                imageSrc = "/img/test/c1.jpg";
-            }
-
-            levelText.textContent = `Your English Level: ${level}`;
-            levelImage.src = imageSrc;
-
-            // показать блок
-            levelResult.classList.remove('hidden');
-            
-            // плавное появление картинки
-            setTimeout(() => {
-                levelImage.classList.remove('opacity-0');
-            }, 100);
-        }
-
-
-        function generateAnswerHTML() {
-            let html = '';
-            questions.forEach((q, index) => {
-                const userAnswer = answers[q.id] || '-';
-                html += `
+      function generateAnswerHTML() {
+        let html = "";
+        questions.forEach((q, index) => {
+          const userAnswer = answers[q.id] || "-";
+          html += `
                     <tr>
-                        <td style="border:1px solid #ccc; padding:8px; text-align: center;">${index + 1}</td>
-                        <td style="border:1px solid #ccc; padding:8px;">${q.text}</td>
+                        <td style="border:1px solid #ccc; padding:8px; text-align: center;">${
+                          index + 1
+                        }</td>
+                        <td style="border:1px solid #ccc; padding:8px;">${
+                          q.text
+                        }</td>
                         <td style="border:1px solid #ccc; padding:8px;">${userAnswer}</td>
-                        <td style="border:1px solid #ccc; padding:8px;">${q.answer}</td>
+                        <td style="border:1px solid #ccc; padding:8px;">${
+                          q.answer
+                        }</td>
                     </tr>
                 `;
-            });
-            return html;
-        }
+        });
+        return html;
+      }
 
+      // Инициализация
+      // emailjs.init("YOUR_PUBLIC_KEY");
+      emailjs.init("Dwc3CXPgvKjMiRAsI");
 
-        // Инициализация
-        // emailjs.init("YOUR_PUBLIC_KEY"); 
-        emailjs.init("Dwc3CXPgvKjMiRAsI"); 
+      // Отправка EmailJS
+      userDataForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userName = e.target.userName.value;
+        const userEmail = e.target.userEmail.value;
 
-        // Отправка EmailJS
-        userDataForm.addEventListener('submit', e => {
-            e.preventDefault();
-            const userName = e.target.userName.value;
-            const userEmail = e.target.userEmail.value;
+        let score = 0;
+        questions.forEach((q) => {
+          if (answers[q.id] === q.answer) score++;
+        });
 
-            let score = 0;
-            questions.forEach(q => {
-                if (answers[q.id] === q.answer) score++;
-            });
+        const tableHTML = generateAnswerHTML();
 
-            const tableHTML = generateAnswerHTML();
+        // Письмо пользователю
+        const userParams = {
+          user_name: userName,
+          user_email: userEmail,
+          level: level,
+          score: score,
+          total: questions.length,
+          answers: tableHTML,
+        };
 
-            // Письмо пользователю
-            const userParams = {
-                user_name: userName,
-                user_email: userEmail,
-                level: level,
-                score: score,
-                total: questions.length,
-                answers: tableHTML
-            };
+        // Письмо администратору
+        const ownerParams = {
+          user_name: userName,
+          user_email: userEmail,
+          level: level,
+          score: score,
+          total: questions.length,
+          answers: tableHTML,
+        };
 
-            // Письмо администратору
-            const ownerParams = {
-                user_name: userName,
-                user_email: userEmail,
-                level: level,
-                score: score,
-                total: questions.length,
-                answers: tableHTML
-            };
-
-            // Отправляем админу
-            // emailjs.send('your_service_id', 'owner_template_id', ownerParams)
-            emailjs.send('service_test77', 'template_yz1rr25', ownerParams)
-                .then(() => {
-                    // После успешной отправки админу → отправляем пользователю
-                    return emailjs.send('service_test77', 'template_ra558qi', userParams);
-                })
-                .then(() => {
-                    // Скрываем тест и показываем сообщение
-                    const testContainer = document.getElementById('user-data-form'); // замените ID на тот, что у вас
-                    testContainer.innerHTML = `
+        // Отправляем админу
+        // emailjs.send('your_service_id', 'owner_template_id', ownerParams)
+        emailjs
+          .send("service_test77", "template_yz1rr25", ownerParams)
+          .then(() => {
+            // После успешной отправки админу → отправляем пользователю
+            return emailjs.send(
+              "service_test77",
+              "template_ra558qi",
+              userParams
+            );
+          })
+          .then(() => {
+            // Скрываем тест и показываем сообщение
+            const testContainer = document.getElementById("user-data-form"); // замените ID на тот, что у вас
+            testContainer.innerHTML = `
                         <div style="text-align:center; padding:40px;">
                             <h2 style="color:#28a745;">🎉 Congratulations, ${userName}!</h2>
                             <p style="font-size:18px;">Your results have been successfully sent to email <b>${userEmail}</b>.</p>
@@ -439,21 +549,21 @@
                         </div>
                     `;
 
-                    // обработчик кнопки перезапуска
-                    document.getElementById('restartBtn').addEventListener('click', () => {
-                        location.reload(); // просто перезагружаем страницу
-                    });
-                })
-                .catch(err => {
-                    alert('Error sending email');
-                    console.error(err);
-                });
+            // обработчик кнопки перезапуска
+            document
+              .getElementById("restartBtn")
+              .addEventListener("click", () => {
+                location.reload(); // просто перезагружаем страницу
+              });
+          })
+          .catch((err) => {
+            alert("Error sending email");
+            console.error(err);
+          });
+      });
 
-        });
-
-        // Вызов загрузки вопросов
-        loadQuestions();
-    
-  </script>
-</body>
+      // Вызов загрузки вопросов
+      loadQuestions();
+    </script>
+  </body>
 </html>

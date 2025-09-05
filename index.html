@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Образовательный центр АКСИОС - Современное обучение и развитие</title>
-    <meta name="description" content="Оперативное удовлетворение познавательных потребностей граждан и организаций по актуальной тематике их профессиональной деятельности, соответствующей области знаний.">
-    <link rel="shortcut icon" href="/img/favicon-96x96.png">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Образовательный центр АКСИОС - Современное обучение и развитие
+    </title>
+    <meta
+      name="description"
+      content="Оперативное удовлетворение познавательных потребностей граждан и организаций по актуальной тематике их профессиональной деятельности, соответствующей области знаний."
+    />
+    <link rel="shortcut icon" href="/img/favicon-96x96.png" />
+    <link rel="stylesheet" href="header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
+      tailwind.config = {
         theme: {
-            extend: {
-                colors: {
-                    'aksios-blue': '#1E40AF',
-                    'aksios-light': '#3B82F6',
-                    'aksios-superlight': '#91C2FF',
-                    'aksios-dark': '#2D3D72',
-                    'aksios-accent': '#60A5FA',
-                },
+          extend: {
+            colors: {
+              "aksios-blue": "#1E40AF",
+              "aksios-light": "#3B82F6",
+              "aksios-superlight": "#91C2FF",
+              "aksios-dark": "#2D3D72",
+              "aksios-accent": "#60A5FA",
             },
+          },
         },
-        };
+      };
     </script>
     <script src="header.js" defer></script>
     <style>
-        html { scroll-behavior: smooth; }
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'); */
-        body { font-family: 'Inter', sans-serif; }
-        /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+      html {
+        scroll-behavior: smooth;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+      */ body {
+        font-family: "Inter", sans-serif;
+      }
+      /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         body { font-family: 'Montserrat', sans-serif; } */
-        .custom-title { color: inherit; font-size: calc(58px*var(--vi-font-coef, 1)); font-weight: 300; letter-spacing: -.02em; line-height: 1.1; }
-        .course-card {
-            transition: all 0.3s ease-out;
-        }
-        .course-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        .swiper-container {
+      .custom-title {
+        color: inherit;
+        font-size: calc(58px * var(--vi-font-coef, 1));
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+      .course-card {
+        transition: all 0.3s ease-out;
+      }
+      .course-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+      .swiper-container {
         width: 1100px;
         max-width: 100%;
         margin: 50px auto;
-        }
-        .hero-product-title {
+      }
+      .hero-product-title {
         font-size: 20px;
         margin-bottom: 10px;
-        }
-        .hero-product-content {
+      }
+      .hero-product-content {
         margin-top: 15px;
-        }
-        .btn {
+      }
+      .btn {
         display: inline-block;
         padding: 10px 20px;
         margin-top: 10px;
@@ -60,962 +78,1745 @@
         color: #fff;
         text-decoration: none;
         transition: 0.3s;
-        }
-        .btn:hover {
+      }
+      .btn:hover {
         background: #005bb5;
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.05); }
-        .fade-in { animation: fadeIn 0.6s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
-    <base href="/">
-</head>
+    <base href="/" />
+  </head>
 
-
-<body class="bg-gray-50">
+  <body class="bg-gray-50">
     <!-- Header -->
     <div id="header-container"></div>
 
     <!-- Hero Section -->
-    <section name="hero-section" class="bg-gradient-to-r from-aksios-blue to-aksios-dark py-32 sm:py-48 md:py-68 text-white relative overflow-hidden mx-auto pt-24">
-        <div name="hero-bg-illustration" class="absolute inset-0 opacity-10">
-            <img src="/img/office.jpg" alt="Умный город" class="w-full h-full object-cover">
-        </div>
-        <div name="hero-content" class="container mx-auto py-20 px-4 relative z-10">
-            <div class="max-w-4xl mx-auto text-center fade-in">
+    <section
+      name="hero-section"
+      class="bg-gradient-to-r from-aksios-blue to-aksios-dark py-32 sm:py-48 md:py-68 text-white relative overflow-hidden mx-auto pt-24"
+    >
+      <div name="hero-bg-illustration" class="absolute inset-0 opacity-10">
+        <img
+          src="/img/office.jpg"
+          alt="Умный город"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div
+        name="hero-content"
+        class="container mx-auto py-20 px-4 relative z-10"
+      >
+        <div class="max-w-4xl mx-auto text-center fade-in">
+          <!-- ПО центру -->
+          <div name="giprosvjaz-logo" class="flex justify-center">
+            <img
+              src="/img/giprosvjaz.png"
+              alt="Логотип Гипросвязь"
+              class="w-40 sm:w-56 md:w-80 h-auto mx-auto"
+            />
+          </div>
 
-                <!-- ПО центру -->
-                <div name="giprosvjaz-logo" class="flex justify-center">
-                    <img src="/img/giprosvjaz.png" alt="Логотип Гипросвязь" class="w-40 sm:w-56 md:w-80 h-auto mx-auto">
-                </div>
-
-                <!-- Слева -->
-                <!-- <div name="giprosvjaz-logo" class="absolute top-4 left-6 mb-16">
+          <!-- Слева -->
+          <!-- <div name="giprosvjaz-logo" class="absolute top-4 left-6 mb-16">
                 <img src="/img/giprosvjaz.png" alt="Логотип Гипросвязь" class="w-56 md:w-72 h-auto">
                 </div> -->
 
-                <h1 name="hero-title" class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mt-10 mb-12">
-                    Образовательный центр<br>
-                    <span class="text-aksios-light">АКСИОС</span>
-                </h1>
+          <h1
+            name="hero-title"
+            class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mt-10 mb-12"
+          >
+            Образовательный центр<br />
+            <span class="text-aksios-light">АКСИОС</span>
+          </h1>
 
-                <p name="hero-subtitle" class="text-xl md:text-2xl mb-8 text-blue-100">
-                    Профессиональное развитие в сфере иностранных языков, цифровой экономики, бизнеса и информационных технологий
-                </p>
-                <button name="hero-cta" class="bg-aksios-accent hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-out hover:scale-105">
-                    <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/">Записаться на курс</a>
-                </button>
-            </div>
+          <p
+            name="hero-subtitle"
+            class="text-xl md:text-2xl mb-8 text-blue-100"
+          >
+            Профессиональное развитие в сфере иностранных языков, цифровой
+            экономики, бизнеса и информационных технологий
+          </p>
+          <button
+            name="hero-cta"
+            class="bg-aksios-accent hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-out hover:scale-105"
+          >
+            <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/"
+              >Записаться на курс</a
+            >
+          </button>
         </div>
+      </div>
     </section>
-
-
 
     <!-- About Section -->
-    <section id="about" name="about-section" class="py-20 sm:py-32 md:py-46 bg-gray-50 mx-auto pt-32">
-        <div name="about-container" class="container mx-auto px-4">
-            <h2 name="about-title" class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] mb-4 text-aksios-blue text-center">
-                О центре
-            </h2>
-            <div id="leader" class="py-2 sm:py-6 md:py-8 mx-auto pt-2">
-                <div name="leader-container" class="w-full max-w-8xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-8 mt-10">
-                    <div class="flex-shrink-0 text-center md:text-left">
-                        <img src="/img/teacher/abuhovich.jpg" alt="Начальник образовательного центра" class="mx-auto w-64 h-auto rounded-xl shadow-md">
-                        <div class="mt-4 italic">
-                            <h3 class="text-xl font-semibold text-gray-900">Юлия Абухович</h3>
-                            <p class="text-aksios-dark">Начальник образовательного центра</p>
-                        </div>
-                    </div>
-
-                    <div class="text-lg text-gray-800 space-y-6 leading-relaxed">
-                        <p class="text-2xl font-semibold text-aksios-dark">Уважаемые друзья, коллеги, партнёры!</p>
-                        <p>В эпоху постоянных трансформаций профессиональное развитие — не опция, а необходимость. Ключ к успеху и карьерной устойчивости заключается в своевременном получении навыков, ведь конкуренция обязывает нас всегда быть на шаг впереди.</p>
-                        <p>Образовательный центр «Аксиос» создан именно для этого: сегодня мы готовы дать Вам те инструменты и знания, которые рынок потребует уже завтра.</p>
-
-                        <div class="space-y-3">
-                            <p class="text-2xl font-semibold text-aksios-dark">Почему стоит выбрать нас?</p>
-
-                            <div class="relative border-l-4 border-aksios-blue pl-6 space-y-8 mt-8">
-                                <div>
-                                    <h4 class="text-xl font-semibold text-aksios-dark">1. Эксперты-практики</h4>
-                                    <p class="text-gray-600">Наши преподаватели — действующие эксперты индустрии. Они научат тому, что применяют сами.</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold text-aksios-dark">2. Сообщество Лидеров</h4>
-                                    <p class="text-gray-600">Вашим нетворком станут амбициозные коллеги, с которыми Вы сможете делиться опытом и расти вместе.</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold text-aksios-dark">3. Сертификат государственного образца</h4>
-                                    <p class="text-gray-600">Вы получите сертификат, удостоверяющий повышение квалификации и признаваемый всеми организациями РБ.</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold text-aksios-dark">4. Ориентация на Вас</h4>
-                                    <p class="text-gray-600">Мы лично общаемся с Заказчиками, чтобы каждая программа закрывала реальные потребности.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p>Мы уверены: с нами Вас ждёт не просто учеба, а мощный инвестиционный вклад в будущее. Готовы быть на шаг впереди?</p>
-                        <p class="font-semibold text-aksios-dark mt-4 italic">С уважением и верой в Ваш успех,<br>
-                            Юлия Абухович
-                        </p>
-                    </div>
-                </div>
+    <section
+      id="about"
+      name="about-section"
+      class="py-20 sm:py-32 md:py-46 bg-gray-50 mx-auto pt-32"
+    >
+      <div name="about-container" class="container mx-auto px-4">
+        <h2
+          name="about-title"
+          class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] mb-4 text-aksios-blue text-center"
+        >
+          О центре
+        </h2>
+        <div id="leader" class="py-2 sm:py-6 md:py-8 mx-auto pt-2">
+          <div
+            name="leader-container"
+            class="w-full max-w-8xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row gap-8 mt-10"
+          >
+            <div class="flex-shrink-0 text-center md:text-left">
+              <img
+                src="/img/teacher/abuhovich.jpg"
+                alt="Начальник образовательного центра"
+                class="mx-auto w-64 h-auto rounded-xl shadow-md"
+              />
+              <div class="mt-4 italic">
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Юлия Абухович
+                </h3>
+                <p class="text-aksios-dark">
+                  Начальник образовательного центра
+                </p>
+              </div>
             </div>
-        </div>
-    </section>
 
+            <div class="text-lg text-gray-800 space-y-6 leading-relaxed">
+              <p class="text-2xl font-semibold text-aksios-dark">
+                Уважаемые друзья, коллеги, партнёры!
+              </p>
+              <p>
+                В эпоху постоянных трансформаций профессиональное развитие — не
+                опция, а необходимость. Ключ к успеху и карьерной устойчивости
+                заключается в своевременном получении навыков, ведь конкуренция
+                обязывает нас всегда быть на шаг впереди.
+              </p>
+              <p>
+                Образовательный центр «Аксиос» создан именно для этого: сегодня
+                мы готовы дать Вам те инструменты и знания, которые рынок
+                потребует уже завтра.
+              </p>
+
+              <div class="space-y-3">
+                <p class="text-2xl font-semibold text-aksios-dark">
+                  Почему стоит выбрать нас?
+                </p>
+
+                <div
+                  class="relative border-l-4 border-aksios-blue pl-6 space-y-8 mt-8"
+                >
+                  <div>
+                    <h4 class="text-xl font-semibold text-aksios-dark">
+                      1. Эксперты-практики
+                    </h4>
+                    <p class="text-gray-600">
+                      Наши преподаватели — действующие эксперты индустрии. Они
+                      научат тому, что применяют сами.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-aksios-dark">
+                      2. Сообщество Лидеров
+                    </h4>
+                    <p class="text-gray-600">
+                      Вашим нетворком станут амбициозные коллеги, с которыми Вы
+                      сможете делиться опытом и расти вместе.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-aksios-dark">
+                      3. Сертификат государственного образца
+                    </h4>
+                    <p class="text-gray-600">
+                      Вы получите сертификат, удостоверяющий повышение
+                      квалификации и признаваемый всеми организациями РБ.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-aksios-dark">
+                      4. Ориентация на Вас
+                    </h4>
+                    <p class="text-gray-600">
+                      Мы лично общаемся с Заказчиками, чтобы каждая программа
+                      закрывала реальные потребности.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                Мы уверены: с нами Вас ждёт не просто учеба, а мощный
+                инвестиционный вклад в будущее. Готовы быть на шаг впереди?
+              </p>
+              <p class="font-semibold text-aksios-dark mt-4 italic">
+                С уважением и верой в Ваш успех,<br />
+                Юлия Абухович
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-xl sm:text-xl md:text-3xl text-aksios-dark font-semibold mb-8">Мы превращаем барьеры в Ваш мощный трамплин для самореализации и карьерного роста, помогая Вам адаптироваться к вызовам цифровой эпохи</h2>
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-xl sm:text-xl md:text-3xl text-aksios-dark font-semibold mb-8"
+        >
+          Мы превращаем барьеры в Ваш мощный трамплин для самореализации и
+          карьерного роста, помогая Вам адаптироваться к вызовам цифровой эпохи
+        </h2>
 
-            <h3 class="custom-title text-2xl sm:text-4xl md:text-[46px] lg:text-[52px] text-aksios-blue mb-6">Наша целевая аудитория</h3>
+        <h3
+          class="custom-title text-2xl sm:text-4xl md:text-[46px] lg:text-[52px] text-aksios-blue mb-6"
+        >
+          Наша целевая аудитория
+        </h3>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Пункт 1 -->
-                <div class="p-6 border rounded-lg shadow-sm bg-white flex items-start">
-                    <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-gray-700">
-                        <strong class="text-aksios-dark">Государственные служащие</strong> от линейных сотрудников до руководителей высшего звена
-                    </p>
-                </div>
-
-                <!-- Пункт 2 -->
-                <div class="p-6 border rounded-lg shadow-sm bg-white flex items-start">
-                    <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-gray-700">
-                        <strong class="text-aksios-dark">Профессионалы и карьеристы</strong>, стремящиеся к постоянному росту, смене профессии или усилению своих компетенций
-                    </p>
-                </div>
-
-                <!-- Пункт 3 -->
-                <div class="p-6 border rounded-lg shadow-sm bg-white flex items-start">
-                    <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-gray-700">
-                        <strong class="text-aksios-dark">Предприниматели и владельцы бизнеса</strong>, ориентированные на внедрение технологий, цифровую трансформацию и масштабирование
-                    </p>
-                </div>
-
-                <!-- Пункт 4 с ссылкой -->
-                <div class="p-6 border rounded-lg shadow-sm bg-white flex items-start">
-                    <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-gray-700">
-                        <strong class="text-aksios-dark">Эксперты и лидеры</strong>, которые стремятся интегрировать цифровые инструменты в работу и развиваться. Вы эксперт и хотите работать с нами?
-                        <a href="https://forms.gle/2bLniqfsKy8iZKut8" class="text-aksios-blue underline font-semibold">Переходите по ссылке</a>
-                        , мы ждём Вас!
-                    </p>
-                </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Пункт 1 -->
+          <div
+            class="p-6 border rounded-lg shadow-sm bg-white flex items-start"
+          >
+            <div
+              class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-3 h-3 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
             </div>
-        </div>
-    </section>
+            <p class="ml-3 text-gray-700">
+              <strong class="text-aksios-dark">Государственные служащие</strong>
+              от линейных сотрудников до руководителей высшего звена
+            </p>
+          </div>
 
+          <!-- Пункт 2 -->
+          <div
+            class="p-6 border rounded-lg shadow-sm bg-white flex items-start"
+          >
+            <div
+              class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-3 h-3 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <p class="ml-3 text-gray-700">
+              <strong class="text-aksios-dark"
+                >Профессионалы и карьеристы</strong
+              >, стремящиеся к постоянному росту, смене профессии или усилению
+              своих компетенций
+            </p>
+          </div>
+
+          <!-- Пункт 3 -->
+          <div
+            class="p-6 border rounded-lg shadow-sm bg-white flex items-start"
+          >
+            <div
+              class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-3 h-3 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <p class="ml-3 text-gray-700">
+              <strong class="text-aksios-dark"
+                >Предприниматели и владельцы бизнеса</strong
+              >, ориентированные на внедрение технологий, цифровую трансформацию
+              и масштабирование
+            </p>
+          </div>
+
+          <!-- Пункт 4 с ссылкой -->
+          <div
+            class="p-6 border rounded-lg shadow-sm bg-white flex items-start"
+          >
+            <div
+              class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-3 h-3 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <p class="ml-3 text-gray-700">
+              <strong class="text-aksios-dark">Эксперты и лидеры</strong>,
+              которые стремятся интегрировать цифровые инструменты в работу и
+              развиваться. Вы эксперт и хотите работать с нами?
+              <a
+                href="https://forms.gle/2bLniqfsKy8iZKut8"
+                class="text-aksios-blue underline font-semibold"
+                >Переходите по ссылке</a
+              >
+              , мы ждём Вас!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Main Directions -->
-    <section id="directions" name="main-directions" class="py-20 sm:py-32 md:py-46 bg-white mx-auto pt-32">
-        <div name="directions-container" class="container mx-auto px-4">
-            <h2 name="directions-title" class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] text-center mb-16 text-aksios-blue">
-                Основные направления
-            </h2>
+    <section
+      id="directions"
+      name="main-directions"
+      class="py-20 sm:py-32 md:py-46 bg-white mx-auto pt-32"
+    >
+      <div name="directions-container" class="container mx-auto px-4">
+        <h2
+          name="directions-title"
+          class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] text-center mb-16 text-aksios-blue"
+        >
+          Основные направления
+        </h2>
 
-            <div name="directions-grid" class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <a href="/langs" class="group block bg-gray-50 p-8 rounded-2xl shadow transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105">
-                    <div name="direction-icon" class="w-16 h-16 mb-6 overflow-hidden">
-                        <img src="img/icon/langs.png" alt="Иностранные языки" class="w-full h-full">
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-aksios-dark group-hover:text-aksios-blue">Иностранные языки</h3>
-                    <p class="text-gray-600 mb-6">Курсы английского языка для профессионального и личностного развития.</p>
-                    <span class="text-aksios-blue font-semibold hover:text-aksios-light">Подробнее →</span>
-                </a>
-
-                <a href="/digital_economy" class="group block bg-gray-50 p-8 rounded-2xl shadow transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105">
-                    <div name="direction-icon" class="w-16 h-16 mb-6 overflow-hidden">
-                        <img src="img/icon/economics.png" alt="Цифровая экономика" class="w-full h-full">
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-aksios-dark group-hover:text-aksios-blue">Цифровая экономика</h3>
-                    <p class="text-gray-600 mb-6">Программы по электронному бизнесу, цифровым продуктам и иновационным стратегиям.</p>
-                    <span class="text-aksios-blue font-semibold hover:text-aksios-light">Подробнее →</span>
-                </a>
-
-                <a href="/business_and_management" class="group block bg-gray-50 p-8 rounded-2xl shadow transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105">
-                    <div name="direction-icon" class="w-16 h-16 mb-6 overflow-hidden">
-                        <img src="img/icon/business.png" alt="Бизнес и управление" class="w-full h-full">
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-aksios-dark group-hover:text-aksios-blue">Бизнес и управление</h3>
-                    <p class="text-gray-600 mb-6">Управление персоналом, бизнес-игры, деловое планирование и развитие управленческих компетенций.</p>
-                    <span class="text-aksios-blue font-semibold hover:text-aksios-light">Подробнее →</span>
-                </a>
-
-                <a href="/it" class="group block bg-gray-50 p-8 rounded-2xl shadow transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105">
-                    <div name="direction-icon" class="w-16 h-16 mb-6 overflow-hidden">
-                        <img src="img/icon/it.png" alt="Информационные технологии" class="w-full h-full">
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-aksios-dark group-hover:text-aksios-blue">Информационные технологии</h3>
-                    <p class="text-gray-600 mb-6">Программы для освоения и развития цифровых навыков, повышения ИТ-компетенций и профессионального роста в сфере технологий.</p>
-                    <span class="text-aksios-blue font-semibold hover:text-aksios-light">Подробнее →</span>
-                </a>
+        <div
+          name="directions-grid"
+          class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
+        >
+          <a
+            href="/langs"
+            class="group block bg-gray-50 p-8 rounded-2xl shadow transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105"
+          >
+            <div name="direction-icon" class="w-16 h-16 mb-6 overflow-hidden">
+              <img
+                src="img/icon/langs.png"
+                alt="Иностранные языки"
+                class="w-full h-full"
+              />
             </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-aksios-dark group-hover:text-aksios-blue"
+            >
+              Иностранные языки
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Курсы английского языка для профессионального и личностного
+              развития.
+            </p>
+            <span class="text-aksios-blue font-semibold hover:text-aksios-light"
+              >Подробнее →</span
+            >
+          </a>
 
+          <a
+            href="/digital_economy"
+            class="group block bg-gray-50 p-8 rounded-2xl shadow transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105"
+          >
+            <div name="direction-icon" class="w-16 h-16 mb-6 overflow-hidden">
+              <img
+                src="img/icon/economics.png"
+                alt="Цифровая экономика"
+                class="w-full h-full"
+              />
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-aksios-dark group-hover:text-aksios-blue"
+            >
+              Цифровая экономика
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Программы по электронному бизнесу, цифровым продуктам и
+              иновационным стратегиям.
+            </p>
+            <span class="text-aksios-blue font-semibold hover:text-aksios-light"
+              >Подробнее →</span
+            >
+          </a>
 
+          <a
+            href="/business_and_management"
+            class="group block bg-gray-50 p-8 rounded-2xl shadow transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105"
+          >
+            <div name="direction-icon" class="w-16 h-16 mb-6 overflow-hidden">
+              <img
+                src="img/icon/business.png"
+                alt="Бизнес и управление"
+                class="w-full h-full"
+              />
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-aksios-dark group-hover:text-aksios-blue"
+            >
+              Бизнес и управление
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Управление персоналом, бизнес-игры, деловое планирование и
+              развитие управленческих компетенций.
+            </p>
+            <span class="text-aksios-blue font-semibold hover:text-aksios-light"
+              >Подробнее →</span
+            >
+          </a>
+
+          <a
+            href="/it"
+            class="group block bg-gray-50 p-8 rounded-2xl shadow transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105"
+          >
+            <div name="direction-icon" class="w-16 h-16 mb-6 overflow-hidden">
+              <img
+                src="img/icon/it.png"
+                alt="Информационные технологии"
+                class="w-full h-full"
+              />
+            </div>
+            <h3
+              class="text-2xl font-bold mb-4 text-aksios-dark group-hover:text-aksios-blue"
+            >
+              Информационные технологии
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Программы для освоения и развития цифровых навыков, повышения
+              ИТ-компетенций и профессионального роста в сфере технологий.
+            </p>
+            <span class="text-aksios-blue font-semibold hover:text-aksios-light"
+              >Подробнее →</span
+            >
+          </a>
         </div>
+      </div>
     </section>
-
 
     <!-- Courses Section -->
-    <section id="courses" name="courses-section" class="py-20 sm:py-32 md:py-46 bg-white mx-auto pt-32">
-        <div name="courses-container" class="container mx-auto px-4">
-            <h2 name="courses-title" class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] text-center mb-12 text-aksios-blue mb-20">
-                Наши программы
-            </h2>
+    <section
+      id="courses"
+      name="courses-section"
+      class="py-20 sm:py-32 md:py-46 bg-white mx-auto pt-32"
+    >
+      <div name="courses-container" class="container mx-auto px-4">
+        <h2
+          name="courses-title"
+          class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] text-center mb-12 text-aksios-blue mb-20"
+        >
+          Наши программы
+        </h2>
 
-            <!-- Course filters -->
-            <div name="course-filters" class="flex flex-wrap justify-center gap-4 mb-12">
-                <button type="button" data-filter="all" class="px-6 py-2 bg-aksios-blue text-white rounded-full font-medium">Все курсы</button>
-                <button type="button" data-filter="LANGS" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-aksios-blue hover:text-white transition-colors">Языки</button>
-                <button type="button" data-filter="IT" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-aksios-blue hover:text-white transition-colors">IT</button>
-                <button type="button" data-filter="BUSINESSMANAGMENT" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-aksios-blue hover:text-white transition-colors">Бизнес</button>
-                <button type="button" data-filter="DIGITALECONOMICS" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-aksios-blue hover:text-white transition-colors">Цифровая экономика</button>
-            </div>
-
-            <!-- Course cards grid -->
-            <div id="courses-grid" name="courses-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Карточки будут загружены через JavaScript -->
-            </div>
-
-            <!-- Кнопка "Показать еще" -->
-            <div class="text-center mt-12">
-                <button id="load-more" class="px-8 py-3 bg-aksios-blue text-white rounded-full font-medium hover:bg-aksios-dark transition-colors">
-                    Показать еще
-                </button>
-            </div>
-
-            <!-- Индикатор загрузки -->
-            <div id="loading" class="text-center mt-8">
-                <p class="text-gray-600">Загрузка данных...</p>
-            </div>
+        <!-- Course filters -->
+        <div
+          name="course-filters"
+          class="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          <button
+            type="button"
+            data-filter="all"
+            class="px-6 py-2 bg-aksios-blue text-white rounded-full font-medium"
+          >
+            Все курсы
+          </button>
+          <button
+            type="button"
+            data-filter="LANGS"
+            class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-aksios-blue hover:text-white transition-colors"
+          >
+            Языки
+          </button>
+          <button
+            type="button"
+            data-filter="IT"
+            class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-aksios-blue hover:text-white transition-colors"
+          >
+            IT
+          </button>
+          <button
+            type="button"
+            data-filter="BUSINESSMANAGMENT"
+            class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-aksios-blue hover:text-white transition-colors"
+          >
+            Бизнес
+          </button>
+          <button
+            type="button"
+            data-filter="DIGITALECONOMICS"
+            class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-aksios-blue hover:text-white transition-colors"
+          >
+            Цифровая экономика
+          </button>
         </div>
+
+        <!-- Course cards grid -->
+        <div
+          id="courses-grid"
+          name="courses-grid"
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Карточки будут загружены через JavaScript -->
+        </div>
+
+        <!-- Кнопка "Показать еще" -->
+        <div class="text-center mt-12">
+          <button
+            id="load-more"
+            class="px-8 py-3 bg-aksios-blue text-white rounded-full font-medium hover:bg-aksios-dark transition-colors"
+          >
+            Показать еще
+          </button>
+        </div>
+
+        <!-- Индикатор загрузки -->
+        <div id="loading" class="text-center mt-8">
+          <p class="text-gray-600">Загрузка данных...</p>
+        </div>
+      </div>
     </section>
 
-
     <!-- Teachers Section -->
-    <section id="teachers" name="teachers-section" class="py-20 sm:py-32 md:py-46 bg-white mx-auto pt-32">
-        <div name="teachers-container" class="container mx-auto px-4">
-            <h2 name="teachers-title" class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] text-left mb-12 text-aksios-blue">
-                Преподавательский состав
-            </h2>
-            <p name="about-description" class="text-xl text-gray-600 mb-12">
-                Преподаватели нашего образовательного центра — специалисты ведущих ВУЗов, проводящие практико-ориентированные занятия. <br>
-                Мы также привлекаем представителей бизнеса для проведения тренингов, чтобы обеспечить актуальность и прикладной характер обучения.
-            </p>
-            <div name="teachers-grid" class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
-                    <div name="teacher" class="flex items-center">
-                        <div name="teacher-avatar" class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden">
-                            <img src="/img/teacher/vishnjakova.png" 
-                                alt="Вишнякова Маргарита Владимировна" 
-                                class="w-full h-auto object-contain">
-                        </div>
-                        <div name="teacher-info" class="ml-3 w-3/5">
-                            <p class="font-semibold text-aksios-dark">Вишнякова Маргарита Владимировна</p>
-                            <p class="text-sm text-gray-500">
-                                Эксперт-практик в области качественных исследований, модератор (глубинные интервью, фокус-группы)
-                            </p>
-                        </div>
-                    </div>
-
-                    <div name="teacher-content" class="mb-4 pt-6 space-y-2">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Кандидат социологических наук с фундаментальной академической подготовкой, автор научных статей</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Более 10 лет помогаю бизнесу и научным командам слышать голос аудитории, принимать точные решения и предвидеть тренды</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Научу превращать инсайты в Ваше конкурентное преимущество!</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
-                    <div name="teacher" class="flex items-center">
-                        <div name="teacher-avatar" class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden">
-                            <img src="/img/teacher/perepechko.jpg" 
-                                alt="Перепечко Наталья Николаевна" 
-                                class="w-full h-auto object-contain">
-                        </div>
-                        <div name="teacher-info" class="ml-3 w-3/5">
-                            <p class="font-semibold text-aksios-dark">Перепечко Наталья Николаевна</p>
-                            <p class="text-sm text-gray-500">
-                                Преподаватель английского с дополнительной подготовкой в области инновационного менеджмента
-                            </p>
-                        </div>
-                    </div>
-
-                    <div name="teacher-content" class="mb-4 pt-6 space-y-2">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">С 2001 года помогаю профессионалам из сферы промышленности и технологий говорить на английском уверенно и эффективно</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Являюсь сертифицированным специалистом по обучению английскому с использованием IT-технологий (U.S. Department of State и Iowa State University)</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Научу Вас свободно выражать мысли на английском языке в любой ситуации: от диалогов с коллегами до переговоров с партнёрами!</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
-                    <div name="teacher" class="flex items-center">
-                        <div name="teacher-avatar" class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden">
-                            <img src="/img/teacher/myalina.jpg" 
-                                alt="Мялина Екатерина Альбертовна" 
-                                class="w-full h-auto object-contain">
-                        </div>
-                        <div name="teacher-info" class="ml-3 w-3/5">
-                            <p class="font-semibold text-aksios-dark">Мялина Екатерина Альбертовна</p>
-                            <p class="text-sm text-gray-500">
-                                Преподаватель русского как иностранного
-                            </p>
-                        </div>
-                    </div>
-
-                    <div name="teacher-content" class="mb-4 pt-6 space-y-2">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Филолог с профессиональной переподготовкой в РИВШ, автор методических материалов для иностранных студентов</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Имею опыт эффективной работы с учениками из Азии и Африки, помогаю преодолевать языковые и культурные барьеры</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Научу Вас не только говорить, но и уверенно чувствовать себя в русскоязычной среде!</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
-                    <div name="teacher" class="flex items-center">
-                        <div name="teacher-avatar" class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden">
-                            <img src="/img/teacher/klimovich.jpg" 
-                                alt="Климович Ананстасия Яковлевна" 
-                                class="w-full h-auto object-contain">
-                        </div>
-                        <div name="teacher-info" class="ml-3 w-3/5">
-                            <p class="font-semibold text-aksios-dark">Климович Ананстасия Яковлевна</p>
-                            <p class="text-sm text-gray-500">
-                                Преподаватель актёрского мастерства, сценической речи и ораторского искусства
-                            </p>
-                        </div>
-                    </div>
-
-                    <div name="teacher-content" class="mb-4 pt-6 space-y-2">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Более 10 лет помогаю людям зазвучать по-новому</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Практикую уникальный этюдный метод и развиваю творческое мышление</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Помогу Вам избавиться от зажимов и страха публичных выступлений!</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
-                    <div name="teacher" class="flex items-center">
-                        <div name="teacher-avatar" class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden">
-                            <img src="/img/teacher/berezovskaya.jpg" 
-                                alt="Березовская Марина Владимировна" 
-                                class="w-full h-auto object-contain">
-                        </div>
-                        <div name="teacher-info" class="ml-3 w-3/5">
-                            <p class="font-semibold text-aksios-dark">Березовская Марина Владимировна</p>
-                            <p class="text-sm text-gray-500">
-                                Преподаватель английского языка, методист Центра
-                            </p>
-                        </div>
-                    </div>
-
-                    <div name="teacher-content" class="mb-4 pt-6 space-y-2">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Специализируюсь как на общем, так и на деловом английском языке</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Имею 15 лет опыта и международный сертификат TEFL</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Помогу Вам преодолеть языковой барьер и заговорить уверенно в любой ситуации!</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
-                    <div name="teacher" class="flex items-center">
-                        <div name="teacher-avatar" class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden">
-                            <img src="/img/teacher/dolgovich.jpg" 
-                                alt="Долгович Анна Александровна" 
-                                class="w-full h-auto object-contain">
-                        </div>
-                        <div name="teacher-info" class="ml-3 w-3/5">
-                            <p class="font-semibold text-aksios-dark">Долгович Анна Александровна</p>
-                            <p class="text-sm text-gray-500">
-                                Преподаватель русского как иностранного с 10-летним стажем
-                            </p>
-                        </div>
-                    </div>
-
-                    <div name="teacher-content" class="mb-4 pt-6 space-y-2">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Владею 5 языками, включая китайский — легко нахожу подход к студентам из Азии и понимаю Ваши трудности</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Создаю авторские учебные материалы, в том числе визуальные пособия</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Сопровождаю на пути от первого русского слова до свободного говорения на русском!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
-                    <div name="teacher" class="flex items-center">
-                        <div name="teacher-avatar" class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden">
-                            <img src="/img/teacher/budko.jpg" 
-                                alt="Будько Ирина Владимировна" 
-                                class="w-full h-auto object-contain">
-                        </div>
-                        <div name="teacher-info" class="ml-3 w-3/5">
-                            <p class="font-semibold text-aksios-dark">Будько Ирина Владимировна</p>
-                            <p class="text-sm text-gray-500">
-                                Преподаватель русского для иностранцев с 20-летним стажем
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div name="teacher-content" class="mb-4 pt-6 space-y-2">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Кандидат наук, автор 130 учебников и статей</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Помогу заговорить на русском с нуля и достичь желаемого уровня от А1 до С1 для работы и жизни</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 ml-3">Практикую индивидуальный подход, подбираю наиболее эффективные методики обучения под любой запрос!</p>
-                        </div>
-                    </div>
-                </div>
-
-
+    <section
+      id="teachers"
+      name="teachers-section"
+      class="py-20 sm:py-32 md:py-46 bg-white mx-auto pt-32"
+    >
+      <div name="teachers-container" class="container mx-auto px-4">
+        <h2
+          name="teachers-title"
+          class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] text-left mb-12 text-aksios-blue"
+        >
+          Преподавательский состав
+        </h2>
+        <p name="about-description" class="text-xl text-gray-600 mb-12">
+          Преподаватели нашего образовательного центра — специалисты ведущих
+          ВУЗов, проводящие практико-ориентированные занятия. <br />
+          Мы также привлекаем представителей бизнеса для проведения тренингов,
+          чтобы обеспечить актуальность и прикладной характер обучения.
+        </p>
+        <div
+          name="teachers-grid"
+          class="grid md:grid-cols-1 lg:grid-cols-3 gap-8"
+        >
+          <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
+            <div name="teacher" class="flex items-center">
+              <div
+                name="teacher-avatar"
+                class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/img/teacher/vishnjakova.png"
+                  alt="Вишнякова Маргарита Владимировна"
+                  class="w-full h-auto object-contain"
+                />
+              </div>
+              <div name="teacher-info" class="ml-3 w-3/5">
+                <p class="font-semibold text-aksios-dark">
+                  Вишнякова Маргарита Владимировна
+                </p>
+                <p class="text-sm text-gray-500">
+                  Эксперт-практик в области качественных исследований, модератор
+                  (глубинные интервью, фокус-группы)
+                </p>
+              </div>
             </div>
+
+            <div name="teacher-content" class="mb-4 pt-6 space-y-2">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Кандидат социологических наук с фундаментальной академической
+                  подготовкой, автор научных статей
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Более 10 лет помогаю бизнесу и научным командам слышать голос
+                  аудитории, принимать точные решения и предвидеть тренды
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Научу превращать инсайты в Ваше конкурентное преимущество!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
+            <div name="teacher" class="flex items-center">
+              <div
+                name="teacher-avatar"
+                class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/img/teacher/perepechko.jpg"
+                  alt="Перепечко Наталья Николаевна"
+                  class="w-full h-auto object-contain"
+                />
+              </div>
+              <div name="teacher-info" class="ml-3 w-3/5">
+                <p class="font-semibold text-aksios-dark">
+                  Перепечко Наталья Николаевна
+                </p>
+                <p class="text-sm text-gray-500">
+                  Преподаватель английского с дополнительной подготовкой в
+                  области инновационного менеджмента
+                </p>
+              </div>
+            </div>
+
+            <div name="teacher-content" class="mb-4 pt-6 space-y-2">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  С 2001 года помогаю профессионалам из сферы промышленности и
+                  технологий говорить на английском уверенно и эффективно
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Являюсь сертифицированным специалистом по обучению английскому
+                  с использованием IT-технологий (U.S. Department of State и
+                  Iowa State University)
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Научу Вас свободно выражать мысли на английском языке в любой
+                  ситуации: от диалогов с коллегами до переговоров с партнёрами!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
+            <div name="teacher" class="flex items-center">
+              <div
+                name="teacher-avatar"
+                class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/img/teacher/myalina.jpg"
+                  alt="Мялина Екатерина Альбертовна"
+                  class="w-full h-auto object-contain"
+                />
+              </div>
+              <div name="teacher-info" class="ml-3 w-3/5">
+                <p class="font-semibold text-aksios-dark">
+                  Мялина Екатерина Альбертовна
+                </p>
+                <p class="text-sm text-gray-500">
+                  Преподаватель русского как иностранного
+                </p>
+              </div>
+            </div>
+
+            <div name="teacher-content" class="mb-4 pt-6 space-y-2">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Филолог с профессиональной переподготовкой в РИВШ, автор
+                  методических материалов для иностранных студентов
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Имею опыт эффективной работы с учениками из Азии и Африки,
+                  помогаю преодолевать языковые и культурные барьеры
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Научу Вас не только говорить, но и уверенно чувствовать себя в
+                  русскоязычной среде!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
+            <div name="teacher" class="flex items-center">
+              <div
+                name="teacher-avatar"
+                class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/img/teacher/klimovich.jpg"
+                  alt="Климович Ананстасия Яковлевна"
+                  class="w-full h-auto object-contain"
+                />
+              </div>
+              <div name="teacher-info" class="ml-3 w-3/5">
+                <p class="font-semibold text-aksios-dark">
+                  Климович Ананстасия Яковлевна
+                </p>
+                <p class="text-sm text-gray-500">
+                  Преподаватель актёрского мастерства, сценической речи и
+                  ораторского искусства
+                </p>
+              </div>
+            </div>
+
+            <div name="teacher-content" class="mb-4 pt-6 space-y-2">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Более 10 лет помогаю людям зазвучать по-новому
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Практикую уникальный этюдный метод и развиваю творческое
+                  мышление
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Помогу Вам избавиться от зажимов и страха публичных
+                  выступлений!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
+            <div name="teacher" class="flex items-center">
+              <div
+                name="teacher-avatar"
+                class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/img/teacher/berezovskaya.jpg"
+                  alt="Березовская Марина Владимировна"
+                  class="w-full h-auto object-contain"
+                />
+              </div>
+              <div name="teacher-info" class="ml-3 w-3/5">
+                <p class="font-semibold text-aksios-dark">
+                  Березовская Марина Владимировна
+                </p>
+                <p class="text-sm text-gray-500">
+                  Преподаватель английского языка, методист Центра
+                </p>
+              </div>
+            </div>
+
+            <div name="teacher-content" class="mb-4 pt-6 space-y-2">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Специализируюсь как на общем, так и на деловом английском
+                  языке
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Имею 15 лет опыта и международный сертификат TEFL
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Помогу Вам преодолеть языковой барьер и заговорить уверенно в
+                  любой ситуации!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
+            <div name="teacher" class="flex items-center">
+              <div
+                name="teacher-avatar"
+                class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/img/teacher/dolgovich.jpg"
+                  alt="Долгович Анна Александровна"
+                  class="w-full h-auto object-contain"
+                />
+              </div>
+              <div name="teacher-info" class="ml-3 w-3/5">
+                <p class="font-semibold text-aksios-dark">
+                  Долгович Анна Александровна
+                </p>
+                <p class="text-sm text-gray-500">
+                  Преподаватель русского как иностранного с 10-летним стажем
+                </p>
+              </div>
+            </div>
+
+            <div name="teacher-content" class="mb-4 pt-6 space-y-2">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Владею 5 языками, включая китайский — легко нахожу подход к
+                  студентам из Азии и понимаю Ваши трудности
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Создаю авторские учебные материалы, в том числе визуальные
+                  пособия
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Сопровождаю на пути от первого русского слова до свободного
+                  говорения на русском!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div name="teacher-card" class="bg-white p-6 rounded-xl shadow-lg">
+            <div name="teacher" class="flex items-center">
+              <div
+                name="teacher-avatar"
+                class="w-2/5 rounded-lg flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/img/teacher/budko.jpg"
+                  alt="Будько Ирина Владимировна"
+                  class="w-full h-auto object-contain"
+                />
+              </div>
+              <div name="teacher-info" class="ml-3 w-3/5">
+                <p class="font-semibold text-aksios-dark">
+                  Будько Ирина Владимировна
+                </p>
+                <p class="text-sm text-gray-500">
+                  Преподаватель русского для иностранцев с 20-летним стажем
+                </p>
+              </div>
+            </div>
+
+            <div name="teacher-content" class="mb-4 pt-6 space-y-2">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Кандидат наук, автор 130 учебников и статей
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Помогу заговорить на русском с нуля и достичь желаемого уровня
+                  от А1 до С1 для работы и жизни
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 bg-aksios-blue rounded-full flex items-center justify-center mt-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600 ml-3">
+                  Практикую индивидуальный подход, подбираю наиболее эффективные
+                  методики обучения под любой запрос!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- FAQ Section -->
-    <section name="faq-section" class="py-14 sm:py-32 md:py-46 bg-white mx-auto pt-8">
-        <div name="faq-container" class="container mx-auto px-4 max-w-4xl">
-            <h2 name="faq-title" class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] text-center mb-12 text-aksios-blue">
-                Часто задаваемые вопросы
-            </h2>
+    <section
+      name="faq-section"
+      class="py-14 sm:py-32 md:py-46 bg-white mx-auto pt-8"
+    >
+      <div name="faq-container" class="container mx-auto px-4 max-w-4xl">
+        <h2
+          name="faq-title"
+          class="custom-title text-3xl sm:text-4xl md:text-[52px] lg:text-[58px] text-center mb-12 text-aksios-blue"
+        >
+          Часто задаваемые вопросы
+        </h2>
 
-            <div name="faq-accordion" class="space-y-4">
-                <div name="faq-item" class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button name="faq-question" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50">
-                        <span class="font-semibold text-lg">Как записаться на курс?</span>
-                        <span class="text-2xl text-aksios-blue">+</span>
-                    </button>
-                    <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
-                        Вы можете записаться на курс через наш сайт, оставив заявку через форму или позвонив по телефону, либо посетить наш офис. Мы поможем вам выбрать подходящую программу обучения.
-                    </div>
-                </div>
-
-                <div name="faq-item" class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button name="faq-question" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50">
-                        <span class="font-semibold text-lg">Как получить более подробную информацию о курсе?</span>
-                        <span class="text-2xl text-aksios-blue">+</span>
-                    </button>
-                    <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
-                        Оставьте нам заявку, укажите свою электронную почту и мы пришлём Вам программу курса.
-                    </div>
-                </div>
-
-                <div name="faq-item" class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button name="faq-question" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50">
-                        <span class="font-semibold text-lg">Обязательно ли заполнять все поля в заявке?</span>
-                        <span class="text-2xl text-aksios-blue">+</span>
-                    </button>
-                    <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
-                        В заявке на обучение только два обязательных поля для заполнения: Ваше имя и номер телефона.
-                        Мы используем информацию из заявки для составления договора на обучения.
-                        Чем больше полей Вы заполните, тем быстрее мы составим договор.
-                    </div>
-                </div>
-
-                <div name="faq-item" class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button name="faq-question" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50">
-                        <span class="font-semibold text-lg">Какие формы обучения доступны?</span>
-                        <span class="text-2xl text-aksios-blue">+</span>
-                    </button>
-                    <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
-                        Мы предлагаем очные, онлайн и смешанные формы обучения. Выберите наиболее удобный для вас формат.
-                    </div>
-                </div>
-
-                <div name="faq-item" class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button name="faq-question" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50" style="overflow:hidden;">
-                        <span class="font-semibold text-lg">Выдается ли сертификат по окончании курса?</span>
-                        <span class="text-2xl text-aksios-blue">+</span>
-                    </button>
-                    <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
-                        Да, по окончании каждого курса вы получаете сертификат установленного образца, подтверждающий ваши знания и навыки.
-                    </div>
-                </div>
+        <div name="faq-accordion" class="space-y-4">
+          <div
+            name="faq-item"
+            class="border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              name="faq-question"
+              class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50"
+            >
+              <span class="font-semibold text-lg">Как записаться на курс?</span>
+              <span class="text-2xl text-aksios-blue">+</span>
+            </button>
+            <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
+              Вы можете записаться на курс через наш сайт, оставив заявку через
+              форму или позвонив по телефону, либо посетить наш офис. Мы поможем
+              вам выбрать подходящую программу обучения.
             </div>
+          </div>
+
+          <div
+            name="faq-item"
+            class="border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              name="faq-question"
+              class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50"
+            >
+              <span class="font-semibold text-lg"
+                >Как получить более подробную информацию о курсе?</span
+              >
+              <span class="text-2xl text-aksios-blue">+</span>
+            </button>
+            <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
+              Оставьте нам заявку, укажите свою электронную почту и мы пришлём
+              Вам программу курса.
+            </div>
+          </div>
+
+          <div
+            name="faq-item"
+            class="border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              name="faq-question"
+              class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50"
+            >
+              <span class="font-semibold text-lg"
+                >Обязательно ли заполнять все поля в заявке?</span
+              >
+              <span class="text-2xl text-aksios-blue">+</span>
+            </button>
+            <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
+              В заявке на обучение только два обязательных поля для заполнения:
+              Ваше имя и номер телефона. Мы используем информацию из заявки для
+              составления договора на обучения. Чем больше полей Вы заполните,
+              тем быстрее мы составим договор.
+            </div>
+          </div>
+
+          <div
+            name="faq-item"
+            class="border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              name="faq-question"
+              class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50"
+            >
+              <span class="font-semibold text-lg"
+                >Какие формы обучения доступны?</span
+              >
+              <span class="text-2xl text-aksios-blue">+</span>
+            </button>
+            <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
+              Мы предлагаем очные, онлайн и смешанные формы обучения. Выберите
+              наиболее удобный для вас формат.
+            </div>
+          </div>
+
+          <div
+            name="faq-item"
+            class="border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              name="faq-question"
+              class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50"
+              style="overflow: hidden"
+            >
+              <span class="font-semibold text-lg"
+                >Выдается ли сертификат по окончании курса?</span
+              >
+              <span class="text-2xl text-aksios-blue">+</span>
+            </button>
+            <div name="faq-answer" class="hidden p-6 pt-0 text-gray-600">
+              Да, по окончании каждого курса вы получаете сертификат
+              установленного образца, подтверждающий ваши знания и навыки.
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Corporate Training Section -->
-    <section id="corporate" name="corporate-section" class="py-20 sm:py-32 md:py-46 bg-aksios-blue text-white mx-auto pt-32">
-        <div name="corporate-container" class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-12">
-
-            <!-- Image on the left -->
-            <div name="corporate-image" class="w-full md:w-1/2 flex justify-center md:justify-start">
-                <img src="/img/lecture.jpg" alt="Обучающие курсы" class="w-full max-w-sm rounded-lg shadow-lg">
-            </div>
-
-            <!-- Text on the right -->
-            <div name="corporate-text" class="w-full md:w-1/2 text-left">
-                <h2 name="corporate-title" class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-                    Заявка на обучающие курсы
-                </h2>
-                <p name="corporate-description" class="text-xl sm:text-2xl md:text-3xl mb-6 text-blue-100">
-                    Оставьте заявку на образовательный курс и менеджер свяжется с вами в ближайшее время.
-                </p>
-                <p name="corporate-description" class="text-xl mb-8 text-gray-400">
-                    *Ваши данные передаются по защищенному каналу коммуникации и являются конфиденциальными.
-                </p>
-                <button name="corporate-cta" class="bg-aksios-accent hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-out hover:scale-105">
-                    <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/">Оставить заявку</a>
-                </button>
-            </div>
+    <section
+      id="corporate"
+      name="corporate-section"
+      class="py-20 sm:py-32 md:py-46 bg-aksios-blue text-white mx-auto pt-32"
+    >
+      <div
+        name="corporate-container"
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-12"
+      >
+        <!-- Image on the left -->
+        <div
+          name="corporate-image"
+          class="w-full md:w-1/2 flex justify-center md:justify-start"
+        >
+          <img
+            src="/img/lecture.jpg"
+            alt="Обучающие курсы"
+            class="w-full max-w-sm rounded-lg shadow-lg"
+          />
         </div>
+
+        <!-- Text on the right -->
+        <div name="corporate-text" class="w-full md:w-1/2 text-left">
+          <h2
+            name="corporate-title"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6"
+          >
+            Заявка на обучающие курсы
+          </h2>
+          <p
+            name="corporate-description"
+            class="text-xl sm:text-2xl md:text-3xl mb-6 text-blue-100"
+          >
+            Оставьте заявку на образовательный курс и менеджер свяжется с вами в
+            ближайшее время.
+          </p>
+          <p name="corporate-description" class="text-xl mb-8 text-gray-400">
+            *Ваши данные передаются по защищенному каналу коммуникации и
+            являются конфиденциальными.
+          </p>
+          <button
+            name="corporate-cta"
+            class="bg-aksios-accent hover:bg-aksios-superlight text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-out hover:scale-105"
+          >
+            <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/"
+              >Оставить заявку</a
+            >
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" 
-        class="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 md:bottom-9 md:right-9
-            bg-aksios-light text-white p-3 sm:p-4 md:p-5
-            rounded-full shadow-lg hidden z-30
-            transform transition-transform duration-300 hover:scale-110">
-        <svg xmlns="http://www.w3.org/2000/svg" 
-            class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" 
-            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-        </svg>
+    <button
+      id="scrollToTopBtn"
+      class="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 md:bottom-9 md:right-9 bg-aksios-light text-white p-3 sm:p-4 md:p-5 rounded-full shadow-lg hidden z-30 transform transition-transform duration-300 hover:scale-110"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
     </button>
 
     <!-- Footer -->
     <footer id="contacts"></footer>
 
     <script>
-        //-----------------------------
-        // Подключение хедера
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
+      //-----------------------------
+      // Подключение хедера
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
 
-                // После загрузки хедера, инициализируем его функциональность
-                if (typeof initHeader === 'function') {
-                    initHeader();
-                }
-            })
-            .catch(error => {
-                console.error('Ошибка загрузки хедера:', error);
-            });
-
-        // Подключение футера
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => document.getElementById('contacts').innerHTML = data);
-
-        //-----------------------------
-        // Кнопка "вверх"
-        const scrollBtn = document.getElementById('scrollToTopBtn');
-
-        // Показать кнопку при прокрутке вниз
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollBtn.classList.remove('hidden');
-            } else {
-                scrollBtn.classList.add('hidden');
-            }
+          // После загрузки хедера, инициализируем его функциональность
+          if (typeof initHeader === "function") {
+            initHeader();
+          }
+        })
+        .catch((error) => {
+          console.error("Ошибка загрузки хедера:", error);
         });
 
-        // Плавная прокрутка наверх
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Подключение футера
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("contacts").innerHTML = data));
+
+      //-----------------------------
+      // Кнопка "вверх"
+      const scrollBtn = document.getElementById("scrollToTopBtn");
+
+      // Показать кнопку при прокрутке вниз
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.remove("hidden");
+        } else {
+          scrollBtn.classList.add("hidden");
+        }
+      });
+
+      // Плавная прокрутка наверх
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      //-----------------------------
+      // Переменные для управления отображением карточек
+      let visibleCount = 3;
+      let currentFilter = "all";
+      let allCourses = [];
+      let filteredCourses = [];
+
+      // Функция для перемешивания массива в случайном порядке (алгоритм Фишера-Йетса)
+      function shuffleArray(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+      }
+
+      // Функция для преобразования данных из ваших JSON файлов в единый формат
+      function transformCourseData(courses, categoryType) {
+        return Object.values(courses).map((course) => {
+          // Определяем категорию для фильтрации
+          let category = "";
+          let badge = course.category || "";
+
+          if (categoryType === "business.json") {
+            category = "BUSINESSMANAGMENT";
+            badge = "БИЗНЕС И УПРАВЛЕНИЕ";
+          } else if (categoryType === "economics.json") {
+            category = "DIGITALECONOMICS";
+            badge = "ЦИФРОВАЯ ЭКОНОМИКА";
+          } else if (categoryType === "it.json") {
+            category = "IT";
+            badge = "ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ";
+          } else if (categoryType === "langs.json") {
+            category = "LANGS";
+            badge = "ИНОСТРАННЫЕ ЯЗЫКИ";
+          }
+
+          // Определяем изображение в зависимости от категории
+          let image = "";
+          if (category === "LANGS") image = "img/topic/langs.jpg";
+          else if (category === "IT") image = "img/topic/it.jpg";
+          else if (category === "BUSINESSMANAGMENT")
+            image = "img/topic/business.jpg";
+          else if (category === "DIGITALECONOMICS")
+            image = "img/topic/economics.jpg";
+
+          // Формируем цену
+          let price = course.details?.price || "Цена не указана";
+          if (typeof price === "string" && price.includes("USD")) {
+            // Конвертируем USD в рубли (примерный курс)
+            const usdAmount = parseFloat(price.match(/(\d+)/)[0]);
+            price = `${Math.round(usdAmount * 3.2)} руб.`; // Примерный курс
+          }
+
+          return {
+            id: Math.random().toString(36).substr(2, 9), // Генерируем уникальный ID
+            category: category,
+            badge: badge,
+            title: course.title,
+            description: course.description.replace(/\n/g, "<br>"), // Заменяем переносы строк на <br>
+            price: price,
+            image: image,
+            link: "https://b24-n0ivzd.b24site.online/crm_form_klp9s/", // Стандартная ссылка
+          };
         });
+      }
 
+      // Функция для создания HTML карточки
+      function createCourseCard(course) {
+        // Определяем цвет бейджа в зависимости от категории
+        let badgeColor = "bg-aksios-blue";
+        if (course.category === "IT") badgeColor = "bg-aksios-dark";
+        if (course.category === "DIGITALECONOMICS")
+          badgeColor = "bg-aksios-light";
+        if (course.category === "BUSINESSMANAGMENT")
+          badgeColor = "bg-aksios-superlight";
 
-        //-----------------------------
-        // Переменные для управления отображением карточек
-        let visibleCount = 3;
-        let currentFilter = 'all';
-        let allCourses = [];
-        let filteredCourses = [];
-
-        // Функция для перемешивания массива в случайном порядке (алгоритм Фишера-Йетса)
-        function shuffleArray(array) {
-            const newArray = [...array];
-            for (let i = newArray.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-            }
-            return newArray;
-        }
-
-        // Функция для преобразования данных из ваших JSON файлов в единый формат
-        function transformCourseData(courses, categoryType) {
-            return Object.values(courses).map(course => {
-                // Определяем категорию для фильтрации
-                let category = '';
-                let badge = course.category || '';
-                
-                if (categoryType === 'business.json') {
-                    category = 'BUSINESSMANAGMENT';
-                    badge = 'БИЗНЕС И УПРАВЛЕНИЕ';
-                } else if (categoryType === 'economics.json') {
-                    category = 'DIGITALECONOMICS';
-                    badge = 'ЦИФРОВАЯ ЭКОНОМИКА';
-                } else if (categoryType === 'it.json') {
-                    category = 'IT';
-                    badge = 'ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ';
-                } else if (categoryType === 'langs.json') {
-                    category = 'LANGS';
-                    badge = 'ИНОСТРАННЫЕ ЯЗЫКИ';
-                }
-                
-                // Определяем изображение в зависимости от категории
-                let image = '';
-                if (category === 'LANGS') image = 'img/topic/langs.jpg';
-                else if (category === 'IT') image = 'img/topic/it.jpg';
-                else if (category === 'BUSINESSMANAGMENT') image = 'img/topic/business.jpg';
-                else if (category === 'DIGITALECONOMICS') image = 'img/topic/economics.jpg';
-                
-                // Формируем цену
-                let price = course.details?.price || 'Цена не указана';
-                if (typeof price === 'string' && price.includes('USD')) {
-                    // Конвертируем USD в рубли (примерный курс)
-                    const usdAmount = parseFloat(price.match(/(\d+)/)[0]);
-                    price = `${Math.round(usdAmount * 3.2)} руб.`; // Примерный курс
-                }
-                
-                return {
-                    id: Math.random().toString(36).substr(2, 9), // Генерируем уникальный ID
-                    category: category,
-                    badge: badge,
-                    title: course.title,
-                    description: course.description.replace(/\n/g, '<br>'), // Заменяем переносы строк на <br>
-                    price: price,
-                    image: image,
-                    link: "https://b24-n0ivzd.b24site.online/crm_form_klp9s/" // Стандартная ссылка
-                };
-            });
-        }
-
-        // Функция для создания HTML карточки
-        function createCourseCard(course) {
-            // Определяем цвет бейджа в зависимости от категории
-            let badgeColor = 'bg-aksios-blue';
-            if (course.category === 'IT') badgeColor = 'bg-aksios-dark';
-            if (course.category === 'DIGITALECONOMICS') badgeColor = 'bg-aksios-light';
-            if (course.category === 'BUSINESSMANAGMENT') badgeColor = 'bg-aksios-superlight';
-
-            return `
+        return `
                 <div name="course-card"
                     data-category="${course.category}"
                     class="course-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow flex flex-col">
                     <!-- картинка -->
                     <div name="course-image" class="h-52 flex items-center justify-center overflow-hidden">
-                        <img src="${course.image}" alt="${course.badge}" class="w-full h-full object-cover">
+                        <img src="${course.image}" alt="${
+          course.badge
+        }" class="w-full h-full object-cover">
                     </div>
 
                     <!-- контент -->
                     <div name="course-content" class="p-6 flex flex-col flex-grow">
                         <!-- верхняя часть: бейдж, заголовок, описание -->
                         <div>
-                            <div class="inline-block px-2 py-1 text-sm ${badgeColor} text-white rounded-full font-medium mb-2">${course.badge}</div>
-                            <h3 class="text-xl font-bold mb-3">${course.title}</h3>
-                            <p class="text-gray-600 mb-4">${course.description.substring(0,180)}...</p>
+                            <div class="inline-block px-2 py-1 text-sm ${badgeColor} text-white rounded-full font-medium mb-2">${
+          course.badge
+        }</div>
+                            <h3 class="text-xl font-bold mb-3">${
+                              course.title
+                            }</h3>
+                            <p class="text-gray-600 mb-4">${course.description.substring(
+                              0,
+                              180
+                            )}...</p>
                         </div>
                         <!-- нижняя часть: цена + кнопка -->
                         <div class="mt-auto flex items-center justify-between">
-                            <span class="text-2xl font-bold text-aksios-dark">${course.price}</span>
-                            <a href="${course.link}" class="bg-aksios-blue text-white px-4 py-2 rounded-lg hover:bg-aksios-dark transition-colors">
+                            <span class="text-2xl font-bold text-aksios-dark">${
+                              course.price
+                            }</span>
+                            <a href="${
+                              course.link
+                            }" class="bg-aksios-blue text-white px-4 py-2 rounded-lg hover:bg-aksios-dark transition-colors">
                                 Записаться
                             </a>
                         </div>
                     </div>
                 </div>
             `;
+      }
+
+      // Функция для отображения карточек
+      function renderCourses() {
+        const coursesGrid = document.getElementById("courses-grid");
+        coursesGrid.innerHTML = "";
+
+        const coursesToShow = filteredCourses.slice(0, visibleCount);
+
+        if (coursesToShow.length === 0) {
+          coursesGrid.innerHTML =
+            '<p class="text-center col-span-3 text-gray-600 py-8">Курсы не найдены</p>';
+        } else {
+          coursesToShow.forEach((course) => {
+            coursesGrid.innerHTML += createCourseCard(course);
+          });
         }
 
-        // Функция для отображения карточек
-        function renderCourses() {
-            const coursesGrid = document.getElementById('courses-grid');
-            coursesGrid.innerHTML = '';
-            
-            const coursesToShow = filteredCourses.slice(0, visibleCount);
-            
-            if (coursesToShow.length === 0) {
-                coursesGrid.innerHTML = '<p class="text-center col-span-3 text-gray-600 py-8">Курсы не найдены</p>';
-            } else {
-                coursesToShow.forEach(course => {
-                    coursesGrid.innerHTML += createCourseCard(course);
-                });
-            }
-            
-            // Показывать/скрывать кнопку "Показать еще"
-            const loadMoreButton = document.getElementById('load-more');
-            if (visibleCount >= filteredCourses.length) {
-                loadMoreButton.style.display = 'none';
-            } else {
-                loadMoreButton.style.display = 'inline-block';
-            }
+        // Показывать/скрывать кнопку "Показать еще"
+        const loadMoreButton = document.getElementById("load-more");
+        if (visibleCount >= filteredCourses.length) {
+          loadMoreButton.style.display = "none";
+        } else {
+          loadMoreButton.style.display = "inline-block";
         }
+      }
 
-        // Функция для фильтрации карточек
-        function filterCourses(category) {
-            currentFilter = category;
-            if (category === 'all') {
-                filteredCourses = shuffleArray([...allCourses]); // Перемешиваем при смене фильтра
-            } else {
-                const filtered = allCourses.filter(course => course.category === category);
-                filteredCourses = shuffleArray(filtered); // Перемешиваем отфильтрованные курсы
-            }
-            visibleCount = 3;
+      // Функция для фильтрации карточек
+      function filterCourses(category) {
+        currentFilter = category;
+        if (category === "all") {
+          filteredCourses = shuffleArray([...allCourses]); // Перемешиваем при смене фильтра
+        } else {
+          const filtered = allCourses.filter(
+            (course) => course.category === category
+          );
+          filteredCourses = shuffleArray(filtered); // Перемешиваем отфильтрованные курсы
+        }
+        visibleCount = 3;
+        renderCourses();
+      }
+
+      // Функция для загрузки данных из JSON файлов
+      async function loadCoursesData() {
+        const loadingElement = document.getElementById("loading");
+
+        try {
+          // Массив с путями к JSON файлам и их типами
+          const jsonFiles = [
+            { path: "data/business.json", type: "business.json" },
+            { path: "data/economics.json", type: "economics.json" },
+            { path: "data/it.json", type: "it.json" },
+            { path: "data/langs.json", type: "langs.json" },
+          ];
+
+          // Загружаем все JSON файлы параллельно
+          const responses = await Promise.all(
+            jsonFiles.map((file) =>
+              fetch(file.path)
+                .then((response) => {
+                  if (!response.ok)
+                    throw new Error(`Ошибка загрузки ${file.path}`);
+                  return response.json();
+                })
+                .then((data) => {
+                  // Преобразуем данные в нужный формат
+                  return transformCourseData(data, file.type);
+                })
+                .catch((error) => {
+                  console.warn(`Не удалось загрузить ${file.path}:`, error);
+                  return []; // Возвращаем пустой массив в случае ошибки
+                })
+            )
+          );
+
+          // Объединяем все данные в один массив и перемешиваем
+          allCourses = shuffleArray(responses.flat());
+          filteredCourses = [...allCourses];
+
+          // Скрываем индикатор загрузки
+          loadingElement.style.display = "none";
+
+          // Отрисовываем курсы
+          renderCourses();
+
+          // Добавляем обработчики событий
+          addEventListeners();
+        } catch (error) {
+          console.error("Ошибка при загрузке данных:", error);
+          loadingElement.innerHTML =
+            '<p class="text-red-500">Не удалось загрузить данные о курсах</p>';
+        }
+      }
+
+      // Функция для добавления обработчиков событий
+      function addEventListeners() {
+        // Обработчик для кнопки "Показать еще"
+        document
+          .getElementById("load-more")
+          .addEventListener("click", function () {
+            visibleCount += 3;
             renderCourses();
-        }
+          });
 
-        // Функция для загрузки данных из JSON файлов
-        async function loadCoursesData() {
-            const loadingElement = document.getElementById('loading');
-            
-            try {
-                // Массив с путями к JSON файлам и их типами
-                const jsonFiles = [
-                    { path: 'data/business.json', type: 'business.json' },
-                    { path: 'data/economics.json', type: 'economics.json' },
-                    { path: 'data/it.json', type: 'it.json' },
-                    { path: 'data/langs.json', type: 'langs.json' }
-                ];
-                
-                // Загружаем все JSON файлы параллельно
-                const responses = await Promise.all(
-                    jsonFiles.map(file => 
-                        fetch(file.path)
-                            .then(response => {
-                                if (!response.ok) throw new Error(`Ошибка загрузки ${file.path}`);
-                                return response.json();
-                            })
-                            .then(data => {
-                                // Преобразуем данные в нужный формат
-                                return transformCourseData(data, file.type);
-                            })
-                            .catch(error => {
-                                console.warn(`Не удалось загрузить ${file.path}:`, error);
-                                return []; // Возвращаем пустой массив в случае ошибки
-                            })
-                    )
-                );
-                
-                // Объединяем все данные в один массив и перемешиваем
-                allCourses = shuffleArray(responses.flat());
-                filteredCourses = [...allCourses];
-                
-                // Скрываем индикатор загрузки
-                loadingElement.style.display = 'none';
-                
-                // Отрисовываем курсы
-                renderCourses();
-                
-                // Добавляем обработчики событий
-                addEventListeners();
-                
-            } catch (error) {
-                console.error('Ошибка при загрузке данных:', error);
-                loadingElement.innerHTML = '<p class="text-red-500">Не удалось загрузить данные о курсах</p>';
-            }
-        }
+        // Обработчики для кнопок фильтрации
+        document.querySelectorAll("[data-filter]").forEach((button) => {
+          button.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
 
-        // Функция для добавления обработчиков событий
-        function addEventListeners() {
-            // Обработчик для кнопки "Показать еще"
-            document.getElementById('load-more').addEventListener('click', function() {
-                visibleCount += 3;
-                renderCourses();
+            // Обновление активного состояния кнопок
+            document.querySelectorAll("[data-filter]").forEach((btn) => {
+              if (btn.getAttribute("data-filter") === filter) {
+                btn.classList.remove("bg-gray-200", "text-gray-700");
+                btn.classList.add("bg-aksios-blue", "text-white");
+              } else {
+                btn.classList.remove("bg-aksios-blue", "text-white");
+                btn.classList.add("bg-gray-200", "text-gray-700");
+              }
             });
-            
-            // Обработчики для кнопок фильтрации
-            document.querySelectorAll('[data-filter]').forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Обновление активного состояния кнопок
-                    document.querySelectorAll('[data-filter]').forEach(btn => {
-                        if (btn.getAttribute('data-filter') === filter) {
-                            btn.classList.remove('bg-gray-200', 'text-gray-700');
-                            btn.classList.add('bg-aksios-blue', 'text-white');
-                        } else {
-                            btn.classList.remove('bg-aksios-blue', 'text-white');
-                            btn.classList.add('bg-gray-200', 'text-gray-700');
-                        }
-                    });
-                    
-                    filterCourses(filter);
-                });
-            });
-        }
 
-        // Инициализация при загрузке страницы
-        document.addEventListener('DOMContentLoaded', function() {
-            // Загружаем данные о курсах
-            loadCoursesData();
+            filterCourses(filter);
+          });
         });
+      }
+
+      // Инициализация при загрузке страницы
+      document.addEventListener("DOMContentLoaded", function () {
+        // Загружаем данные о курсах
+        loadCoursesData();
+      });
     </script>
 
     <!-- Скрипты -->
     <script type="module" src="script.js"></script>
-</body>
+  </body>
 </html>
