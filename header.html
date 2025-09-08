@@ -1,256 +1,368 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>АКСИОС - Меню</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="/header.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            "aksios-blue": "#1e40af",
-            "aksios-light": "#3b82f6",
-            "aksios-dark": "#2D3D72",
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>АКСИОС - Меню</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/header.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "aksios-blue": "#1e40af",
+              "aksios-light": "#3b82f6",
+              "aksios-dark": "#2D3D72",
+            },
           },
         },
-      },
-    };
-  </script>
-  <script src="/header.js" defer></script>
-  <style>
-        html { scroll-behavior: smooth; }
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.05); }
-        .fade-in { animation: fadeIn 0.6s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  </style>
-
-</head>
-<body class="bg-gray-50 font-sans">
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div class="hidden md:flex container mx-auto px-5 py-4 items-center gap-6">
-
+      };
+    </script>
+    <script src="/header.js" defer></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div class="hidden md:flex w-full px-10 py-4 items-center gap-12">
         <!-- Лого -->
-        <a href="/" class="flex items-center flex-none mr-4">
-          <img src="/img/logo_aksios.png" alt="АКСИОС" class="w-16 h-16 sm:w-14 sm:h-14 xs:w-12 xs:h-12 object-contain" />
+        <a href="/" class="flex items-center flex-none mr-6">
+          <img
+            src="/img/logo_aksios.png"
+            alt="АКСИОС"
+            class="w-16 h-16 sm:w-14 sm:h-14 xs:w-12 xs:h-12 object-contain"
+          />
         </a>
 
         <!-- Меню -->
-        <nav id="desktop-menu"
-            class="flex-1 flex flex-wrap items-center justify-center gap-x-6 gap-y-2
-                  font-semibold text-gray-700 text-[15px] lg:text-lg xl:text-[17px]">
-
+        <nav
+          id="desktop-menu"
+          class="flex-1 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 font-semibold text-gray-700 text-base md:text-[17px] lg:text-[18px]"
+        >
           <!-- О центре -->
           <div class="relative group">
-            <a href="/#about" class="hover:text-aksios-blue transition font-semibold lg:text-lg">О центре</a>
-            <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible
-                        group-hover:opacity-100 group-hover:visible transition-all space-y-2 z-10">
-              <a href="/news" class="block px-4 py-1 hover:bg-gray-100 hover:text-aksios-blue rounded-md font-semibold lg:text-lg">Новости</a>
-              <a href="/eplatform_lichba" class="block px-4 py-1 hover:bg-gray-100 hover:text-aksios-blue rounded-md font-semibold lg:text-lg">Онлайн-платформа Лiчба</a>
-              <a href="/english_test" class="block px-4 py-1 hover:bg-gray-100 hover:text-aksios-blue rounded-md font-semibold lg:text-lg">Тест на определение уровня английского языка</a>
+            <a
+              href="/#about"
+              class="hover:text-aksios-blue transition"
+              >О центре</a
+            >
+            <div
+              class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all space-y-2 z-10"
+            >
+              <a
+                href="/news"
+                class="block px-4 py-1.5 hover:bg-gray-100 hover:text-aksios-blue rounded-md"
+                >Новости</a
+              >
+              <a
+                href="/eplatform_lichba"
+                class="block px-4 py-1.5 hover:bg-gray-100 hover:text-aksios-blue rounded-md"
+                >Онлайн-платформа Лiчба</a
+              >
+              <a
+                href="/english_test"
+                class="block px-4 py-1.5 hover:bg-gray-100 hover:text-aksios-blue rounded-md"
+                >Тест на определение уровня английского языка</a
+              >
             </div>
           </div>
 
           <!-- Направления -->
           <div class="relative group">
-            <a href="/#directions" class="hover:text-aksios-blue transition font-semibold lg:text-lg">Направления</a>
-            <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible
-                        group-hover:opacity-100 group-hover:visible transition-all space-y-2 z-10">
-              <a href="/langs" class="block px-4 py-1 hover:bg-gray-100 hover:text-aksios-blue rounded-md font-semibold lg:text-lg">Иностранные языки</a>
-              <a href="/digital_economy" class="block px-4 py-1 hover:bg-gray-100 hover:text-aksios-blue rounded-md font-semibold lg:text-lg">Цифровая экономика</a>
-              <a href="/business_and_management" class="block px-4 py-1 hover:bg-gray-100 hover:text-aksios-blue rounded-md font-semibold lg:text-lg">Бизнес и управление</a>
-              <a href="/it" class="block px-4 py-1 hover:bg-gray-100 hover:text-aksios-blue rounded-md font-semibold lg:text-lg">Информационные технологии</a>
-              <!-- <a href="/russian_for_chinese" class="block px-4 py-1 hover:bg-gray-100 hover:text-aksios-blue rounded-md font-semibold lg:text-lg">俄语专业交流指南。经济领域专业俄语</a> -->
+            <a
+              href="/#directions"
+              class="hover:text-aksios-blue transition"
+              >Направления</a
+            >
+            <div
+              class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all space-y-2 z-10"
+            >
+              <a
+                href="/langs"
+                class="block px-4 py-1.5 hover:bg-gray-100 hover:text-aksios-blue rounded-md"
+                >Иностранные языки</a
+              >
+              <a
+                href="/digital_economy"
+                class="block px-4 py-1.5 hover:bg-gray-100 hover:text-aksios-blue rounded-md"
+                >Цифровая экономика</a
+              >
+              <a
+                href="/business_and_management"
+                class="block px-4 py-1.5 hover:bg-gray-100 hover:text-aksios-blue rounded-md"
+                >Бизнес и управление</a
+              >
+              <a
+                href="/it"
+                class="block px-4 py-1.5 hover:bg-gray-100 hover:text-aksios-blue rounded-md"
+                >Информационные технологии</a
+              >
             </div>
           </div>
 
-          <a href="/#courses" class="hover:text-aksios-blue transition font-semibold lg:text-lg">Программы</a>
-          <a href="/russian_for_chinese" class="hover:text-aksios-blue transition font-semibold lg:text-lg">俄语专业交流指南。经济领域专业俄语</a>
-          <a href="/#teachers" class="hover:text-aksios-blue transition font-semibold lg:text-lg">Преподаватели</a>
-          <a href="#contacts" class="hover:text-aksios-blue transition font-semibold lg:text-lg">Контакты</a>
+          <a
+            href="/#courses"
+            class="hover:text-aksios-blue transition"
+            >Программы</a
+          >
+          <a
+            href="/russian_for_chinese"
+            class="hover:text-aksios-blue transition flex flex-col leading-tight text-center"
+          >
+            <span>俄语专业交流指南。</span>
+            <span>经济领域专业俄语</span>
+          </a>
+          <a
+            href="/#teachers"
+            class="hover:text-aksios-blue transition"
+            >Преподаватели</a
+          >
+          <a
+            href="#contacts"
+            class="hover:text-aksios-blue transition"
+            >Контакты</a
+          >
         </nav>
-
-
 
         <!-- Соцсети + телефоны -->
         <div class="flex items-center gap-3 flex-none">
           <!-- Соцсети -->
           <div class="flex gap-2">
-            <a href="https://www.instagram.com/aksios.by/" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition">
+            <a
+              href="https://www.instagram.com/aksios.by/"
+              class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition"
+            >
               <i class="fab fa-instagram text-aksios-blue text-lg"></i>
             </a>
-            <a href="https://t.me/centeraksios" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition">
+            <a
+              href="https://t.me/centeraksios"
+              class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition"
+            >
               <i class="fab fa-telegram text-aksios-blue text-lg"></i>
             </a>
-            <a href="mailto:aksios.center@gmail.com" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition">
-              <img src="/img/icon/mail_blue.png" alt="Почта" class="w-5 h-5"/>
+            <a
+              href="mailto:aksios.center@gmail.com"
+              class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition"
+            >
+              <img src="/img/icon/mail_blue.png" alt="Почта" class="w-5 h-5" />
             </a>
-            <a href="https://giprosvjaz.by/" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition">
-              <img src="/img/icon/gipro_logo_blue.png" alt="ОАО «Гипросвязь»" class="w-4 h-4"/>
+            <a
+              href="https://giprosvjaz.by/"
+              class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition"
+            >
+              <img
+                src="/img/icon/gipro_logo_blue.png"
+                alt="ОАО «Гипросвязь»"
+                class="w-4 h-4"
+              />
             </a>
           </div>
           <!-- Телефоны -->
-          <div class="flex flex-col leading-tight text-gray-700 font-normal text-xs lg:text-sm whitespace-nowrap">
-            <a href="tel:+375447305107" class="hover:text-aksios-blue">+375 (44) 730 51 07</a>
-            <a href="tel:+375333811295" class="hover:text-aksios-blue">+375 (33) 381 12 95</a>
+          <div
+            class="flex flex-col leading-tight text-gray-700 font-normal text-xs lg:text-sm whitespace-nowrap"
+          >
+            <a href="tel:+375447305107" class="hover:text-aksios-blue"
+              >+375 (44) 730 51 07</a
+            >
+            <a href="tel:+375333811295" class="hover:text-aksios-blue"
+              >+375 (33) 381 12 95</a
+            >
           </div>
         </div>
 
         <!-- Кнопки (всегда справа) -->
         <div class="flex items-center gap-3 flex-none ml-auto">
-          <a href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/"
-            class="bg-aksios-blue hover:bg-aksios-light text-white px-4 py-2 rounded-lg
-                    text-sm lg:text-base font-semibold transition-all duration-300 ease-out hover:scale-105 whitespace-nowrap">
+          <a
+            href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/"
+            class="bg-aksios-blue hover:bg-aksios-light text-white px-4 py-2 rounded-lg text-sm lg:text-base font-semibold transition-all duration-300 ease-out hover:scale-105 whitespace-nowrap"
+          >
             <span class="lg:hidden">Записаться</span>
             <span class="hidden lg:inline">Записаться на курс</span>
           </a>
-          <a href="https://lichba.gov.by/auth/realms/EducationalPlatform/protocol/openid-connect/auth?response_type=code&client_id=openOlat&redirect_uri=https%3A%2F%2Flichba.gov.by%2Foauthcallback"
-            class="font-semibold text-gray-700 flex items-center gap-1 text-sm lg:text-base transition-all duration-300 ease-out hover:scale-105 whitespace-nowrap">
+          <a
+            href="https://lichba.gov.by/auth/realms/EducationalPlatform/protocol/openid-connect/auth?response_type=code&client_id=openOlat&redirect_uri=https%3A%2F%2Flichba.gov.by%2Foauthcallback"
+            class="font-semibold text-gray-700 flex items-center gap-1 text-sm lg:text-base transition-all duration-300 ease-out hover:scale-105 whitespace-nowrap"
+          >
             <i class="fas fa-user-circle text-xl lg:text-2xl"></i>
             <span class="hidden lg:inline">Личный кабинет</span>
           </a>
         </div>
       </div>
+      
+        <!-- Mobile Header Top Bar -->
+      <div
+        class="md:hidden fixed top-0 left-0 w-full bg-white z-50 shadow-md"
+        style="height: 76px"
+      >
+          <div
+            class="w-full mobile-header-inner flex items-center justify-between h-full px-4 gap-4"
+          >
+            <!-- Личный кабинет слева -->
+            <a
+              href="https://lichba.gov.by/auth/realms/EducationalPlatform/protocol/openid-connect/auth?response_type=code&client_id=openOlat&redirect_uri=https%3A%2F%2Flichba.gov.by%2Foauthcallback"
+              class="text-2xl text-aksios-dark flex justify-center items-center"
+              title="Личный кабинет"
+              ><i class="fas fa-user-circle"></i
+            ></a>
 
+            <!-- Логотип по центру -->
+            <div class="mobile-logo flex justify-center items-center flex-grow">
+              <a href="/" class="inline-block">
+                <img src="/img/logo_aksios.png" alt="logo" />
+              </a>
+            </div>
 
-      <!-- Mobile Header Top Bar -->
-      <div class="md:hidden fixed top-0 left-0 w-full bg-white z-50 shadow-md" style="height: 76px;">
-        <div class="w-full mobile-header-inner flex items-center justify-between h-full px-4 gap-4">
-          <!-- Личный кабинет слева -->
-          <a
-            href="https://lichba.gov.by/auth/realms/EducationalPlatform/protocol/openid-connect/auth?response_type=code&client_id=openOlat&redirect_uri=https%3A%2F%2Flichba.gov.by%2Foauthcallback"
-            class="text-2xl text-aksios-dark flex justify-center items-center"
-            title="Личный кабинет"
-            ><i class="fas fa-user-circle"></i
-          ></a>
+            <!-- Бургер / Крестик справа -->
+            <button
+              id="burger-btn"
+              class="w-10 h-10 relative focus:outline-none text-aksios-dark"
+              aria-label="Меню"
+            >
+              <i id="burger-icon" class="fas fa-bars text-2xl"></i>
+              <i id="close-icon" class="fas fa-times text-2xl hidden"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-          <!-- Логотип по центру -->
-          <div class="mobile-logo flex justify-center items-center flex-grow">
-            <a href="/" class="inline-block">
-              <img
-                src="/img/logo_aksios.png"
-                alt="logo"
-                
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu fixed top-0 left-0 w-full h-screen bg-white z-40 pt-[76px] px-6 overflow-y-auto"
+      >
+        <nav class="flex flex-col text-lg font-semibold">
+          <!-- О центре -->
+          <div class="border-b">
+            <button
+              class="accordion-toggle flex justify-between items-center w-full px-4 py-5"
+            >
+              <span>О центре</span>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div
+              class="accordion-content hidden pl-6 pb-2 text-base font-normal space-y-0.5"
+            >
+              <a href="/news" class="block px-3 py-1.5">Новости</a>
+              <a href="/eplatform_lichba" class="block px-3 py-1.5"
+                >Онлайн-платформа Лiчба</a
+              >
+              <a href="/english_test" class="block px-3 py-1.5"
+                >Тест на определение уровня английского языка</a
+              >
+            </div>
+          </div>
+
+          <!-- Направления -->
+          <div class="border-b">
+            <button
+              class="accordion-toggle flex justify-between items-center w-full px-4 py-5"
+            >
+              <span>Направления</span>
+              <i class="fas fa-chevron-down transition-transform"></i>
+            </button>
+            <div
+              class="accordion-content hidden pl-6 pb-2 text-base font-normal space-y-0.5"
+            >
+              <a href="/langs" class="block px-3 py-1.5">Иностранные языки</a>
+              <a href="/digital_economy" class="block px-3 py-1.5"
+                >Цифровая экономика</a
+              >
+              <a href="/business_and_management" class="block px-3 py-1.5"
+                >Бизнес и управление</a
+              >
+              <a href="/it" class="block px-3 py-2"
+                >Информационные технологии</a
+              >
+              <!-- <a href="/russian_for_chinese" class="block px-3 py-1.5">俄语专业交流指南。经济领域专业俄语</a> -->
+            </div>
+          </div>
+
+          <a href="/#courses" class="block border-b px-4 py-5">Программы</a>
+          <a href="/russian_for_chinese" class="block border-b px-4 py-5"
+            >俄语专业交流指南。经济领域专业俄语</a
+          >
+          <a href="/#teachers" class="block border-b px-4 py-5"
+            >Преподаватели</a
+          >
+          <!-- <a href="#contacts" class="block border-b px-4 py-5">Контакты</a> -->
+        </nav>
+
+        <!-- Контакты -->
+        <div class="mt-6 text-gray-700">
+          <p class="font-semibold mb-2">Связаться с нами:</p>
+          <a href="tel:+375447305107" class="block">+375 (44) 730 51 07</a>
+          <a href="tel:+375333811295" class="block">+375 (33) 381 12 95</a>
+        </div>
+
+        <!-- Соцсети -->
+        <div class="mt-4">
+          <!-- <p class="font-semibold mb-2">Мы в соцсетях:</p> -->
+          <div class="flex space-x-2">
+            <a
+              href="https://www.instagram.com/aksios.by/"
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
+              ><i class="fab fa-instagram text-aksios-blue"></i
+            ></a>
+            <a
+              href="https://t.me/centeraksios"
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
+              ><i class="fab fa-telegram text-aksios-blue"></i
+            ></a>
+            <a
+              href="mailto:aksios.center@gmail.com"
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
+              ><img src="/img/icon/mail_blue.png" alt="Почта" class="w-6 h-6" />
+            </a>
+            <a
+              href="https://giprosvjaz.by/"
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
+              ><img
+                src="/img/icon/gipro_logo_blue.png"
+                alt="ОАО «Гипросвязь»"
+                class="w-4 h-4"
               />
             </a>
           </div>
-
-          <!-- Бургер / Крестик справа -->
-          <button
-            id="burger-btn"
-            class="w-10 h-10 relative focus:outline-none text-aksios-dark"
-            aria-label="Меню"
-          >
-            <i id="burger-icon" class="fas fa-bars text-2xl"></i>
-            <i id="close-icon" class="fas fa-times text-2xl hidden"></i>
-          </button>
         </div>
+
+        <!-- CTA -->
+        <a
+          href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/"
+          class="block w-full bg-aksios-blue text-white py-3 rounded-lg text-center font-medium mt-6"
+          >Записаться</a
+        >
       </div>
-    </div>
-
-    <!-- Mobile Menu -->
-  <div
-    id="mobile-menu"
-    class="mobile-menu fixed top-0 left-0 w-full h-screen bg-white z-40 pt-[76px] px-6 overflow-y-auto"
-  >
-      <nav class="flex flex-col text-lg font-semibold">
-        <!-- О центре -->
-        <div class="border-b">
-          <button
-            class="accordion-toggle flex justify-between items-center w-full px-4 py-5"
-          >
-            <span>О центре</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-            <div class="accordion-content hidden pl-6 pb-2 text-base font-normal space-y-0.5">
-              <a href="/news" class="block px-3 py-1.5">Новости</a>
-              <a href="/eplatform_lichba" class="block px-3 py-1.5">Онлайн-платформа Лiчба</a>
-              <a href="/english_test" class="block px-3 py-1.5">Тест на определение уровня английского языка</a>
-            </div>
-
-        </div>
-
-        <!-- Направления -->
-        <div class="border-b">
-          <button
-            class="accordion-toggle flex justify-between items-center w-full px-4 py-5"
-          >
-            <span>Направления</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content hidden pl-6 pb-2 text-base font-normal space-y-0.5">
-            <a href="/langs" class="block px-3 py-1.5">Иностранные языки</a>
-            <a href="/digital_economy" class="block px-3 py-1.5">Цифровая экономика</a>
-            <a href="/business_and_management" class="block px-3 py-1.5">Бизнес и управление</a>
-            <a href="/it" class="block px-3 py-2">Информационные технологии</a>
-            <!-- <a href="/russian_for_chinese" class="block px-3 py-1.5">俄语专业交流指南。经济领域专业俄语</a> -->
-          </div>
-        </div>
-
-        <a href="/#courses" class="block border-b px-4 py-5">Программы</a>
-        <a href="/russian_for_chinese" class="block border-b px-4 py-5">俄语专业交流指南。经济领域专业俄语</a>
-        <a href="/#teachers" class="block border-b px-4 py-5">Преподаватели</a>
-        <!-- <a href="#contacts" class="block border-b px-4 py-5">Контакты</a> -->
-      </nav>
-
-      <!-- Контакты -->
-      <div class="mt-6 text-gray-700">
-        <p class="font-semibold mb-2">Связаться с нами:</p>
-        <a href="tel:+375447305107" class="block">+375 (44) 730 51 07</a>
-        <a href="tel:+375333811295" class="block">+375 (33) 381 12 95</a>
-      </div>
-
-      <!-- Соцсети -->
-      <div class="mt-4">
-        <!-- <p class="font-semibold mb-2">Мы в соцсетях:</p> -->
-        <div class="flex space-x-2">
-          <a
-            href="https://www.instagram.com/aksios.by/"
-            class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
-            ><i class="fab fa-instagram text-aksios-blue"></i
-          ></a>
-          <a
-            href="https://t.me/centeraksios"
-            class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
-            ><i class="fab fa-telegram text-aksios-blue"></i
-          ></a>
-          <a
-            href="mailto:aksios.center@gmail.com"
-            class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
-            ><img
-              src="/img/icon/mail_blue.png"
-              alt="Почта"
-              class="w-6 h-6"
-            />
-          </a>
-          <a
-            href="https://giprosvjaz.by/"
-            class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full"
-            ><img
-              src="/img/icon/gipro_logo_blue.png"
-              alt="ОАО «Гипросвязь»"
-              class="w-4 h-4"
-            />
-          </a>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a
-        href="https://b24-n0ivzd.b24site.online/crm_form_klp9s/"
-        class="block w-full bg-aksios-blue text-white py-3 rounded-lg text-center font-medium mt-6"
-        >Записаться</a
-      >
-    </div>
-  </header>
-
-
-</body>
+    </header>
+  </body>
 </html>
-
